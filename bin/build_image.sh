@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TEMPLATE=
+TEMPLATE=/opt/hyh/packer-templates/
 export PATH=/usr/local/bin:$PATH
 
 run_help() {

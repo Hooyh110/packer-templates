@@ -1,0 +1,62 @@
+{
+  "builders": [
+    {
+      "boot_command": [
+        "c<wait>",
+        "linux /images/pxeboot/vmlinuz inst.stage2=hd:LABEL=CentOS\\x207\\x20aarch64 ",
+        "text biosdevname=0 net.ifnames=0 ",
+        "ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos-7/ks-aarch64.cfg<enter>",
+        "initrd /images/pxeboot/initrd.img<enter>",
+        "boot<enter><wait>"
+      ],
+      "accelerator": "kvm",
+      "boot_wait": "10s",
+      "disk_size": "10G",
+      "disk_interface": "virtio-scsi",
+      "format": "qcow2",
+      "headless": true,
+      "http_directory": "http",
+      "iso_checksum_type": "sha256",
+      "iso_checksum": "ad0a58bf7c2be9c27827560d3f04e11b83be65320fb9e52d9c4f71ee60a67a25",
+      "iso_url": "http://luna.galaxy.ksyun.com/images/iso/CentOS-7-aarch64-Everything-1810.iso",
+      "output_directory": "packer-centos-7-aarch64-openstack",
+      "qemuargs": [
+        [ "-m", "8072M" ],
+        ["-machine", "gic-version=3,accel=kvm"],
+        ["-cpu", "host"],
+        [ "-boot", "strict=on" ],
+        [ "-bios", "/usr/share/AAVMF/AAVMF_CODE.fd" ],
+        [ "-monitor", "none" ]
+      ],
+      "qemu_binary": "/usr/libexec/qemu-kvm",
+      "shutdown_command": "echo 'centos'|sudo -S /sbin/halt -h -p",
+      "ssh_password": "Kingsoft123",
+      "ssh_port": 22,
+      "ssh_username": "root",
+      "ssh_wait_timeout": "10000s",
+      "type": "qemu",
+      "vm_name": "packer-centos-7-aarch64-openstack",
+      "vnc_bind_address": "0.0.0.0"
+    }
+  ],
+  "provisioners": [
+    {
+      "execute_command": "echo 'centos' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+      "scripts": [
+        "scripts/centos/osuosl-altarch.sh",
+        "scripts/centos/fix-slow-dns.sh",
+        "scripts/common/sshd.sh",
+        "scripts/common/vmtools.sh",
+        "scripts/centos/openstack.sh",
+        "scripts/centos/cleanup.sh",
+        "scripts/common/minimize.sh"
+      ],
+      "type": "shell"
+    }
+  ],
+  "variables": {
+    "mirror": "http://centos-altarch.osuosl.org",
+    "build": "20230714",
+    "image_name": "CentOS 7.6"
+  }
+}
