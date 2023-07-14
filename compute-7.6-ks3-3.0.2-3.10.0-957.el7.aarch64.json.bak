@@ -41,15 +41,12 @@
   ],
   "provisioners": [
     {
-      "destination": "/etc/yum.repos.d/galaxy.repo",
-      "source": "http/galaxy.repo",
-      "type": "file"
-    },
-    {
       "execute_command": "echo 'centos' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
       "scripts": [
-        "scripts/centos/repo.sh",
+        "scripts/centos/osuosl-altarch.sh",
+        "scripts/centos/fix-slow-dns.sh",
         "scripts/common/sshd.sh",
+        "scripts/common/vmtools.sh",
         "scripts/centos/openstack.sh",
         "scripts/centos/cleanup.sh",
         "scripts/common/minimize.sh"
