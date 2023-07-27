@@ -4,8 +4,8 @@
       "boot_command": [
         "c<wait>",
         "linux /images/pxeboot/vmlinuz inst.stage2=hd:LABEL=Rocky-8-8-aarch64-dvd inst.repo=http://luna.galaxy.ksyun.com/rocky_os/8.8/aarch64 ",
-        "biosdevname=0 net.ifnames=0 ",
-        "ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/rocky/ks-aarch64.cfg<enter>",
+        "inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/rocky/ks-aarch64.cfg ",
+        "biosdevname=0 net.ifnames=0<enter>",
         "initrd /images/pxeboot/initrd.img<enter>",
         "boot<enter><wait>"
       ],
