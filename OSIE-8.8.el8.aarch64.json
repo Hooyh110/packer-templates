@@ -3,9 +3,9 @@
     {
       "boot_command": [
         "c<wait>",
-        "linux /images/pxeboot/vmlinuz inst.repo=http://luna.galaxy.ksyun.com/rocky_os/8.8/aarch64",
-        "text biosdevname=0 net.ifnames=0 ",
-        "ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/rocky/ks-aarch64.cfg<enter>",
+        "linux /images/pxeboot/vmlinuz inst.repo=http://luna.galaxy.ksyun.com/rocky_os/8.8/aarch64 ",
+        "inst.ks=http://luna.galaxy.ksyun.com/rocky_os/8.8/aarch64/ks-aarch64.cfg inst.text inst.debug ",
+        "biosdevname=0 net.ifnames=0 ",
         "initrd /images/pxeboot/initrd.img<enter>",
         "boot<enter><wait>"
       ],
