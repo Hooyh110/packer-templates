@@ -1,0 +1,65 @@
+{
+  "builders": [
+    {
+      "boot_command": [
+        "c<wait>",
+        "linux /images/pxeboot/vmlinuz inst.stage2=hd:LABEL=Rocky\\x208.8\\x20aarch64 ",
+        "text biosdevname=0 net.ifnames=0 ",
+        "ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/rocky/ks-aarch64.cfg<enter>",
+        "initrd /images/pxeboot/initrd.img<enter>",
+        "boot<enter><wait>"
+      ],
+      "accelerator": "kvm",
+      "boot_wait": "10s",
+      "disk_size": "10G",
+      "disk_interface": "virtio-scsi",
+      "format": "qcow2",
+      "headless": true,
+      "http_directory": "http",
+      "iso_checksum_type": "sha256",
+      "iso_checksum": "41f098a6556e50703eae4f44a721bc779392756e9d1612b551c04050af6170a7",
+      "iso_url": "http://luna.galaxy.ksyun.com/images/iso/Rocky-8.8-aarch64-minimal.iso",
+      "output_directory": "packer-osie-rocky-8.8.el8.aarch64-openstack",
+      "qemuargs": [
+        [ "-m", "8072M" ],
+        ["-machine", "gic-version=3,accel=kvm"],
+        ["-cpu", "host"],
+        [ "-boot", "strict=on" ],
+        [ "-bios", "/usr/share/AAVMF/AAVMF_CODE.fd" ],
+        [ "-monitor", "none" ]
+      ],
+      "qemu_binary": "/usr/libexec/qemu-kvm",
+      "shutdown_command": "echo 'centos'|sudo -S /sbin/halt -h -p",
+      "ssh_password": "Kingsoft123",
+      "ssh_port": 22,
+      "ssh_username": "root",
+      "ssh_wait_timeout": "10000s",
+      "type": "qemu",
+      "vm_name": "packer-osie-rocky-8.8.el8.aarch64-openstack",
+      "vnc_bind_address": "0.0.0.0"
+    }
+  ],
+  "provisioners": [
+    {
+      "destination": "/etc/yum.repos.d/galaxy_arm.repo",
+      "source": "http/galaxy_arm.repo",
+      "type": "file"
+    },
+    {
+      "execute_command": "echo 'rocky' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+      "scripts": [
+        "scripts/centos/repo.sh",
+        "scripts/common/sshd.sh",
+        "scripts/centos/openstack.sh",
+        "scripts/centos/cleanup.sh",
+        "scripts/common/minimize.sh"
+      ],
+      "type": "shell"
+    }
+  ],
+  "variables": {
+    "mirror": "http://luna.galaxy.ksyun.com/rocky/",
+    "build": "20230727",
+    "image_name": "Rocky 8.8"
+  }
+}
