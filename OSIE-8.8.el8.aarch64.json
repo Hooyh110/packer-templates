@@ -3,7 +3,7 @@
     {
       "boot_command": [
         "c<wait>",
-        "linux /images/pxeboot/vmlinuz inst.stage2=hd:LABEL=Rocky\\x208.8\\x20aarch64 ",
+        "linux /images/pxeboot/vmlinuz inst.repo=http://luna.galaxy.ksyun.com/rocky_os/8.8/aarch64",
         "text biosdevname=0 net.ifnames=0 ",
         "ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/rocky/ks-aarch64.cfg<enter>",
         "initrd /images/pxeboot/initrd.img<enter>",
