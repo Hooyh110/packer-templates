@@ -17,7 +17,7 @@
       "headless": true,
       "http_directory": "http",
       "iso_checksum_type": "sha256",
-      "iso_checksum": "41f098a6556e50703eae4f44a721bc779392756e9d1612b551c04050af6170a7",
+      "iso_checksum": "66e42db03c677493b0f27c7f8c30223f46f3bb239261a9dc754c14f214cf8d0f",
       "iso_url": "http://10.178.88.1/images/iso/Rocky-8.8-aarch64-dvd1.iso",
       "output_directory": "packer-osie-rocky-8.8.el8.aarch64-openstack",
       "qemuargs": [
