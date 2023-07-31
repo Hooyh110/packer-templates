@@ -27,7 +27,7 @@ done
 
 [ -z "$TEMPLATE" ] && echo "Error: Template file not set" && exit 1
 
-DIR_NAME="packer-$(basename -s .json "$TEMPLATE")"
+DIR_NAME="$(basename -s .json "$TEMPLATE")"
 TEMPLATE_NAME="$(basename -s .json "$TEMPLATE")"
 IMAGE_NAME=$(grep vm_name "$TEMPLATE" | awk '{print $2}' | sed -e 's/\"//g' | sed -e 's/,//g')
 FINAL_QCOW_FILE_NAME="${DIR_NAME}/${IMAGE_NAME}-compressed.qcow2"
@@ -48,7 +48,9 @@ if [ -e "chef/${TEMPLATE_NAME}/Berksfile" ]; then
   berks vendor --delete -b "chef/${TEMPLATE_NAME}/Berksfile" "chef/${TEMPLATE_NAME}/cookbooks"
 fi
 
+#export PACKER_LOG=1
 packer build -on-error=abort -color=false -force "$(basename "$TEMPLATE")"
+#packer build --debug "$(basename "$TEMPLATE")"
 
 qemu-img convert -O qcow2 -c "${DIR_NAME}/${IMAGE_NAME}" "$FINAL_QCOW_FILE_NAME"
 qemu-img convert -O raw "${DIR_NAME}/${IMAGE_NAME}" "$FINAL_RAW_FILE_NAME"
