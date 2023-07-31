@@ -12,7 +12,7 @@
       "accelerator": "kvm",
       "boot_wait": "10s",
       "disk_size": "120G",
-      "disk_interface": "virtio-scsi",
+      "disk_interface": "virtio",
       "format": "qcow2",
       "headless": true,
       "http_directory": "http",
