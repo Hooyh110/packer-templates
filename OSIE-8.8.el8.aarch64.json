@@ -29,7 +29,6 @@
         [ "-monitor", "none" ]
       ],
       "qemu_binary": "/usr/libexec/qemu-kvm",
-      "tmp_path": "/tmp/",
       "shutdown_command": "echo 'rocky'|sudo -S /sbin/halt -h -p",
       "ssh_password": "Kingsoft123",
       "ssh_port": 22,
