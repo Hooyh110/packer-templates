@@ -19,7 +19,7 @@
       "iso_checksum_type": "sha256",
       "iso_checksum": "66e42db03c677493b0f27c7f8c30223f46f3bb239261a9dc754c14f214cf8d0f",
       "iso_url": "http://10.178.88.1/images/iso/Rocky-8.8-aarch64-dvd1.iso",
-      "output_directory": "packer-osie-rocky-8.8.el8.aarch64-openstack",
+      "output_directory": "osie-rocky-8.8.el8.aarch64-openstack",
       "qemuargs": [
         [ "-m", "8072M" ],
         ["-machine", "gic-version=3,accel=kvm"],
@@ -35,7 +35,7 @@
       "ssh_username": "root",
       "ssh_wait_timeout": "10000s",
       "type": "qemu",
-      "vm_name": "packer-osie-rocky-8.8.el8.aarch64-openstack",
+      "vm_name": "osie-rocky-8.8.el8.aarch64-openstack",
       "vnc_bind_address": "0.0.0.0"
     }
   ],
