@@ -29,7 +29,7 @@
         [ "-monitor", "none" ]
       ],
       "qemu_binary": "/usr/libexec/qemu-kvm",
-      "shutdown_command": "echo 'centos'|sudo -S /sbin/halt -h -p",
+      "shutdown_command": "echo 'rocky'|sudo -S /sbin/halt -h -p",
       "ssh_password": "Kingsoft123",
       "ssh_port": 22,
       "ssh_username": "root",
