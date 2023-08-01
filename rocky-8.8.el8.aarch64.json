@@ -11,7 +11,7 @@
       ],
       "accelerator": "kvm",
       "boot_wait": "10s",
-      "disk_size": "10G",
+      "disk_size": "200G",
       "disk_interface": "virtio",
       "format": "qcow2",
       "headless": true,
