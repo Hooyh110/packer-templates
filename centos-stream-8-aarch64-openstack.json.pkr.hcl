@@ -85,25 +85,25 @@ build {
     ]
   }
 
-  provisioner "file" {
-    source = "cookbooks"
-    destination = "/tmp/cinc/"
-  }
-
-  provisioner "file" {
-    source = "inspec"
-    destination = "/tmp/cinc/"
-  }
-
-  provisioner "file" {
-    source = "chef/client.rb"
-    destination = "/tmp/cinc/client.rb"
-  }
-
-  provisioner "file" {
-    source = "chef/runlist/openstack.json"
-    destination = "/tmp/cinc/dna.json"
-  }
+//  provisioner "file" {
+//    source = "cookbooks"
+//    destination = "/tmp/cinc/"
+//  }
+//
+//  provisioner "file" {
+//    source = "inspec"
+//    destination = "/tmp/cinc/"
+//  }
+//
+//  provisioner "file" {
+//    source = "chef/client.rb"
+//    destination = "/tmp/cinc/client.rb"
+//  }
+//
+//  provisioner "file" {
+//    source = "chef/runlist/openstack.json"
+//    destination = "/tmp/cinc/dna.json"
+//  }
 
   provisioner "shell" {
     execute_command = "{{ .Vars }} sudo -S -E bash '{{ .Path }}'"
