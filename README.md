@@ -19,6 +19,7 @@ served by Packer's `http` server are available in the right place in this repo.
 ```
 # 将json文件进行转格式操作
 packer fix compute-7.6-ks3-3.0.2-3.10.0-957.el7.aarch64.json > compute-7.6-ks3-3.0.2-3.10.0-957.el7.aarch64-openstack.json
+packer fix OSIE-8.8.el8.aarch64.json > osie-rocky-8.8.el8.aarch64-openstack.json
 # 执行构建
 ./bin/build_image.sh -t compute-7.6-ks3-3.0.2-3.10.0-957.el7.aarch64-openstack.json
 ```
