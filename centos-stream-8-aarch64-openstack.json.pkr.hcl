@@ -2,7 +2,10 @@ variable "mirror" {
   type    = string
   default = "http://centos.osuosl.org"
 }
-
+variable "mirror_url" {
+  type    = string
+  default = "http://10.178.88.1"
+}
 variable "osuadmin_passwd" {
   type      = string
   sensitive = true
@@ -21,11 +24,11 @@ source "qemu" "centos-stream-8" {
   boot_wait        = "10s"
   disk_interface   = "virtio-scsi"
   disk_size        = 4096
-  format           = "raw"
+  format           = "qcow2"
   headless         = true
   http_directory   = "http"
-  iso_checksum     = "file:https://centos.osuosl.org/8-stream/isos/aarch64/CHECKSUM"
-  iso_url          = "${var.mirror}/8-stream/isos/aarch64/CentOS-Stream-8-aarch64-latest-dvd1.iso"
+  iso_checksum     = "file:${var.mirror_url}/images/iso/sha1sum.txt"
+  iso_url          = "${var.mirror_url}/images/iso/CentOS-Stream-8-aarch64-latest-dvd1.iso"
   qemu_binary      = "qemu-kvm"
   qemuargs         = [
     [
@@ -59,8 +62,8 @@ source "qemu" "centos-stream-8" {
   ssh_username     = "root"
   ssh_wait_timeout = "10000s"
   vnc_bind_address = "0.0.0.0"
-  vnc_port_min     = 5901
-  vnc_port_max     = 5901
+  vnc_port_min     = 5980
+  vnc_port_max     = 5980
   vm_name          = "centos-stream-8"
 }
 
