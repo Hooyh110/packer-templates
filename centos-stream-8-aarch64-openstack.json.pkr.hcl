@@ -28,7 +28,6 @@ source "qemu" "centos-stream-8" {
   headless         = true
   http_directory   = "http"
   iso_checksum     = "file:${var.mirror_url}/images/iso/sha1sum.txt"
-  iso_checksum_type= "sha1"
   iso_url          = "${var.mirror_url}/images/iso/CentOS-Stream-8-aarch64-latest-dvd1.iso"
   qemu_binary      = "/usr/libexec/qemu-kvm"
   qemuargs         = [
