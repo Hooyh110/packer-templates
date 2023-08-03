@@ -19,7 +19,7 @@
       "iso_checksum_type": "sha256",
       "iso_checksum": "ad0a58bf7c2be9c27827560d3f04e11b83be65320fb9e52d9c4f71ee60a67a25",
       "iso_url": "http://luna.galaxy.ksyun.com/images/iso/CentOS-7-aarch64-Everything-1810.iso",
-      "output_directory": "packer-compute-7.6-ks3-3.0.2-3.10.0-957.el7.aarch64-openstack",
+      "output_directory": "compute-7.6-ks3-3.0.2-3.10.0-957.el7.aarch64-openstack",
       "qemuargs": [
         [ "-m", "8072M" ],
         ["-machine", "gic-version=3,accel=kvm"],
@@ -35,7 +35,7 @@
       "ssh_username": "root",
       "ssh_wait_timeout": "10000s",
       "type": "qemu",
-      "vm_name": "packer-compute-7.6-ks3-3.0.2-3.10.0-957.el7.aarch64-openstack",
+      "vm_name": "compute-7.6-ks3-3.0.2-3.10.0-957.el7.aarch64-openstack",
       "vnc_bind_address": "0.0.0.0"
     }
   ],
