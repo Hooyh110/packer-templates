@@ -49,10 +49,10 @@
       "execute_command": "echo 'centos' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
       "scripts": [
         "scripts/centos/repo.sh",
-        "scripts/common/sshd.sh",
         "scripts/centos/openstack.sh",
         "scripts/centos/cleanup.sh",
-        "scripts/common/minimize.sh"
+        "scripts/common/minimize.sh",
+        "scripts/common/sshd.sh"
       ],
       "type": "shell"
     }
