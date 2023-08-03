@@ -17,7 +17,7 @@ source "qemu" "centos-stream-8" {
   boot_command     = [
     "c<wait>",
     "linux /images/pxeboot/vmlinuz text biosdevname=0 net.ifnames=0 ",
-    "inst.stage2=hd:LABEL=CentOS\\xStream\\x8\\xaarch64 ",
+    "inst.stage2=hd:LABEL=CentOS\\-Stream\\-8\\-BaseOS\\-aarch64 ",
     "inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos-stream-8/ks-aarch64.cfg<enter>",
     "initrd /images/pxeboot/initrd.img<enter>",
     "boot<enter><wait>"]
