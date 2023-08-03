@@ -49,9 +49,9 @@
       "execute_command": "echo 'rocky' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
       "scripts": [
         "scripts/centos/repo.sh",
-        "scripts/common/rocky_sshd.sh",
         "scripts/centos/openstack.sh",
-        "scripts/centos/cleanup.sh"
+        "scripts/centos/cleanup.sh",
+        "scripts/common/rocky_sshd.sh"
       ],
       "type": "shell"
     }
