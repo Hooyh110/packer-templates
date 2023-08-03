@@ -13,7 +13,7 @@ checkDirective() {
 
 checkDirective UseDNS no
 checkDirective PermitRootLogin yes
-checkDirective PasswordAuthentication yes
+#checkDirective PasswordAuthentication yes
 checkDirective GSSAPIAuthentication no
 checkDirective KbdInteractiveAuthentication no
 checkDirective ChallengeResponseAuthentication no
