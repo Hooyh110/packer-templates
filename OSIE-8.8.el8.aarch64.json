@@ -51,7 +51,7 @@
         "scripts/centos/repo.sh",
         "scripts/centos/openstack.sh",
         "scripts/centos/cleanup.sh",
-        "scripts/common/rocky_sshd.sh"
+        "scripts/common/sshd.sh"
       ],
       "type": "shell"
     }
