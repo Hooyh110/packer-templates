@@ -8,7 +8,7 @@ cat > ${SSH_CONFIG} <<EOF
   SyslogFacility AUTHPRIV
   PermitRootLogin yes
   AuthorizedKeysFile .ssh/authorized_keys
-  PasswordAuthentication no
+  PasswordAuthentication yes
   ChallengeResponseAuthentication no
   GSSAPIAuthentication no
   GSSAPICleanupCredentials no
