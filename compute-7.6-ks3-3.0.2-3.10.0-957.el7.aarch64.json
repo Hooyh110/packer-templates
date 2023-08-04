@@ -50,6 +50,14 @@
       "type": "file"
     },
     {
+      "destination": "/etc/cloud/",
+      "source": [
+        "http/cloud.cfg",
+        "http/ds-identify.cfg"
+      ],
+      "type": "file"
+    },
+    {
       "execute_command": "echo 'centos' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
       "scripts": [
         "scripts/centos/repo.sh",
