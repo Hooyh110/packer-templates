@@ -1,0 +1,41 @@
+---
+- name: Install kernel
+  yum:
+    name: "{{ kernel_package|reject('equalto', '')|list }}"
+    state: present
+  register: kernel_upgrade
+
+- when: ansible_distribution_major_version == "6"
+  block:
+    - name: Backup grub
+      copy:
+        src: /boot/grub/grub.conf
+        dest: /boot/grub/grub.conf.bak
+        remote_src: true
+        backup: true
+        force: true
+
+    - name: Modify grub
+      shell: |
+        /sbin/grubby --args="{{ ' '.join(kvm_el6_grub_args) }}" --update-kernel=ALL
+
+- when: ansible_distribution_major_version == "7"
+  block:
+    - name: Modify grub
+      vars:
+        - GRUB_ARGS: "crashkernel=512M biosdevname=0 net.ifnames=0 rdloaddriver=mlx5_core rdloaddriver=i40e rdloaddriver=ixgbe SYSFONT=latarcyrheb-sun16 LANG=en_US.UTF-8 KEYTABLE=us intel_idle.max_cstate=0"
+      replace:
+        dest: /etc/default/grub
+        regexp: "^(GRUB_CMDLINE_LINUX=).*"
+        replace: '\1"{{ GRUB_ARGS }}"'
+        backup: true
+      register: result
+
+    - name: Makeconfig Grub
+      command: "/usr/sbin/grub2-mkconfig -o /boot/grub2/grub.cfg"
+      when: result is changed
+
+- name: Set need reboot
+  set_fact:
+    reboot_required: "yes"
+  when: kernel_upgrade.changed | bool

@@ -1,0 +1,1349 @@
+{
+  "builds": [
+    {
+      "name": "image",
+      "builder_type": "qemu",
+      "build_time": 1654954602,
+      "files": [
+        {
+          "name": "CentOS-6.5-base-20220611133021.qcow2",
+          "size": 2162491392
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "f1b8b667-8e68-8cfa-eb47-9d0fd3e8c8ca",
+      "custom_data": null
+    },
+    {
+      "name": "image",
+      "builder_type": "qemu",
+      "build_time": 1656569262,
+      "files": [
+        {
+          "name": "CentOS-6.5-base123-20220630054616.qcow2",
+          "size": 2167603200
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "b4155ce4-0599-7865-4b49-d511d936bc50",
+      "custom_data": null
+    },
+    {
+      "name": "image",
+      "builder_type": "qemu",
+      "build_time": 1656985981,
+      "files": [
+        {
+          "name": "CentOS-7.3-compute-gpt-20220705014426.qcow2",
+          "size": 2089746432
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "9ca00fe8-9c3c-acc3-87cc-54a52e4e574e",
+      "custom_data": null
+    },
+    {
+      "name": "image",
+      "builder_type": "qemu",
+      "build_time": 1656987097,
+      "files": [
+        {
+          "name": "CentOS-7.3-compute-gpt-20220705020055.qcow2",
+          "size": 2035744768
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "4c7443dc-58a3-b46e-7419-d8f2f008ad8e",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1656997488,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-gpt-20220705045652.qcow2",
+          "size": 1651245056
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "f1ef4166-c293-10c0-9ee5-cc5c188c4b39",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1656999064,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-gpt-20220705052428.qcow2",
+          "size": 1560805376
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "c4259586-a4df-bbbf-0107-d6173f9047b7",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1657000412,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-gpt-20220705054315.qcow2",
+          "size": 1538654208
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "51f9c95c-ba97-82af-ffb0-b504069684b1",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1657006198,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-gpt-20220705072132.qcow2",
+          "size": 1626931200
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "a501951f-02ea-1886-ad08-dc52eec760c7",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1657013849,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-gpt-20220705092302.qcow2",
+          "size": 1618214912
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "726295de-dd74-d483-9ad6-ce046f1a1864",
+      "custom_data": null
+    },
+    {
+      "name": "image",
+      "builder_type": "qemu",
+      "build_time": 1657014937,
+      "files": [
+        {
+          "name": "CentOS-7.3-compute-gpt-20220705094854.qcow2",
+          "size": 2102657024
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "11a4840c-00bc-1a3b-60b0-a65d668b3bbd",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1657030695,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-gpt-20220705140834.qcow2",
+          "size": 1611792384
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "28fab21d-1023-7758-e396-516ee78fdb72",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1657031964,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-gpt-20220705143003.qcow2",
+          "size": 1620180992
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "342fb783-f403-b391-0b93-bd8254f9bb2f",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1657032991,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-gpt-20220705144753.qcow2",
+          "size": 1589313536
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "f7d3d1df-6938-b9fc-3e49-83c34ce5e77d",
+      "custom_data": null
+    },
+    {
+      "name": "image",
+      "builder_type": "qemu",
+      "build_time": 1657033630,
+      "files": [
+        {
+          "name": "CentOS-7.3-compute-gpt-20220705150044.qcow2",
+          "size": 1932460032
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "b272bf61-eb53-43be-1e9d-bfdb32e007b9",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1657079014,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-gpt-20220706033546.qcow2",
+          "size": 1618083840
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "b9cf7dfc-3df7-a43f-d1d5-f7a7be5f9210",
+      "custom_data": null
+    },
+    {
+      "name": "image",
+      "builder_type": "qemu",
+      "build_time": 1657079611,
+      "files": [
+        {
+          "name": "CentOS-7.3-compute-gpt-20220706034605.qcow2",
+          "size": 2128871424
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "42629677-380f-ed37-d24d-fa3d2f0066e8",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1657107632,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-gpt-20220706112953.qcow2",
+          "size": 1861222400
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "b4dc6d4d-228b-9812-94ea-68bfb7537017",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1657110184,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-gpt-20220706121419.qcow2",
+          "size": 1750859776
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "cf162011-42e7-2332-717e-9a31eb35b73c",
+      "custom_data": null
+    },
+    {
+      "name": "image",
+      "builder_type": "qemu",
+      "build_time": 1657110721,
+      "files": [
+        {
+          "name": "CentOS-7.3-compute-gpt-20220706122454.qcow2",
+          "size": 2183069696
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "10adf7b4-0007-d8a4-57bc-bc70777d46b9",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1657163048,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-gpt-20220707025539.qcow2",
+          "size": 1745420288
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "bd820a92-3aff-24dd-eff3-d10b424d0bec",
+      "custom_data": null
+    },
+    {
+      "name": "image",
+      "builder_type": "qemu",
+      "build_time": 1657163673,
+      "files": [
+        {
+          "name": "CentOS-7.3-compute-gpt-20220707030718.qcow2",
+          "size": 2151284736
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "ee0b9c9a-0f8a-4cea-b59f-ae0e44937d09",
+      "custom_data": null
+    },
+    {
+      "name": "image",
+      "builder_type": "qemu",
+      "build_time": 1657854606,
+      "files": [
+        {
+          "name": "CentOS-7.3-firstnode-20220715030247.qcow2",
+          "size": 2783182848
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "fdb94807-32b6-1b1b-716c-504f647be1a2",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1658927744,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-20220727130455.qcow2",
+          "size": 2260467712
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "239877aa-8fac-0df7-5dc0-8fa2081f92c4",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1659939868,
+      "files": [
+        {
+          "name": "CentOS-7.6-shangtang-base-20220808061054.qcow2",
+          "size": 2144010240
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "86af076b-2077-f4ae-debc-9674ea3bcd5e",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1659959810,
+      "files": [
+        {
+          "name": "CentOS-7.6-shangtang-gpt-base-20220808114440.qcow2",
+          "size": 2286747648
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "8b8b68fe-061b-0b57-509b-c24508d86c46",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1659968626,
+      "files": [
+        {
+          "name": "CentOS-7.6-shangtang-gpt-base-20220808140930.qcow2",
+          "size": 2294743040
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "e38af57c-e306-29f6-bacb-c9e44deb2d9d",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1660014631,
+      "files": [
+        {
+          "name": "CentOS-7.5-base-20220809025941.qcow2",
+          "size": 1684144128
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "be57d4a0-4055-1223-c130-7b221125d721",
+      "custom_data": null
+    },
+    {
+      "name": "image",
+      "builder_type": "qemu",
+      "build_time": 1660015664,
+      "files": [
+        {
+          "name": "CentOS-7.3-shangtang-gpt-compute-20220809032138.qcow2",
+          "size": 2125922304
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "b1fa4bf8-fa12-3714-4f91-6168b25272b0",
+      "custom_data": null
+    },
+    {
+      "name": "image",
+      "builder_type": "qemu",
+      "build_time": 1660030094,
+      "files": [
+        {
+          "name": "CentOS-7.3-shangtang-gpt-compute-20220809072014.qcow2",
+          "size": 2133065728
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "e5212706-9c20-7ed5-58a6-8b8b77719cab",
+      "custom_data": null
+    },
+    {
+      "name": "image",
+      "builder_type": "qemu",
+      "build_time": 1660038485,
+      "files": [
+        {
+          "name": "CentOS-7.3-shangtang-compute-20220809094028.qcow2",
+          "size": 2440101888
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "882b2ff4-3da0-d6a4-a169-0e36e3b5f7d3",
+      "custom_data": null
+    },
+    {
+      "name": "image",
+      "builder_type": "qemu",
+      "build_time": 1660041444,
+      "files": [
+        {
+          "name": "CentOS-7.5-shangtang-compute-sdn-20220809103249.qcow2",
+          "size": 2058747904
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "240b5c79-85a8-7235-0d95-d0dd8599d8c3",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1660042716,
+      "files": [
+        {
+          "name": "CentOS-6.5-shangtang-base-20220809104703.qcow2",
+          "size": 1635581952
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "9af1e7fc-0cdf-f69a-0947-99c3f0eb91fa",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1660057007,
+      "files": [
+        {
+          "name": "CentOS-6.5-shangtang-base-20220809144517.qcow2",
+          "size": 1739718656
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "7f6189c0-f15f-d57f-a84c-bf6714a0808d",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1660213215,
+      "files": [
+        {
+          "name": "CentOS-8.2-shangtang-base-20220811101355.qcow2",
+          "size": 2519662592
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "04b59b36-b052-9e23-a810-8fef8332000c",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1660220453,
+      "files": [
+        {
+          "name": "CentOS-8.2-shangtang-base-20220811114516.qcow2",
+          "size": 2456944640
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "7cf0d488-83a4-5b35-4c3a-c0a0e0bbc620",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1660282365,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-20220812052404.qcow2",
+          "size": 1651703808
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "2c4a485f-8e43-60bb-d1fe-20e9b1772340",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1660287914,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-20220812070115.qcow2",
+          "size": 1330118656
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "62dc3f4d-7118-3447-6320-c97b501fee4a",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1660296804,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-20220812092802.qcow2",
+          "size": 1304231936
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "303bcb3a-7e3d-9afc-92ca-3173009d0ec2",
+      "custom_data": null
+    },
+    {
+      "name": "image",
+      "builder_type": "qemu",
+      "build_time": 1661474620,
+      "files": [
+        {
+          "name": "CentOS-7.3-compute-8358p.qcow2",
+          "size": 2416771072
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "6da8bca2-25a4-f44c-f541-54cb9e0dcfb5",
+      "custom_data": null
+    },
+    {
+      "name": "image",
+      "builder_type": "qemu",
+      "build_time": 1661491467,
+      "files": [
+        {
+          "name": "CentOS-7.3-compute-8358p.qcow2",
+          "size": 2452160512
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "05d0af82-7b88-4e03-1545-7c655f7cf122",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1662535115,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-8358p.qcow2",
+          "size": 1821835264
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "05e6cf07-73bf-5532-ddaa-fb515b4013a3",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1662538492,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-8358p.qcow2",
+          "size": 1704984576
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "a80ef3a7-de18-1110-507e-fcc7bba24213",
+      "custom_data": null
+    },
+    {
+      "name": "image",
+      "builder_type": "qemu",
+      "build_time": 1662540040,
+      "files": [
+        {
+          "name": "CentOS-7.3-compute-8358p.qcow2",
+          "size": 2503868416
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "7c2a598e-959f-9f16-aae7-d43888231cfd",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1662624929,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-8358p.qcow2",
+          "size": 1623130112
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "540028f7-10ec-18bc-201a-3472eabfff27",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1663290838,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-8358p.qcow2",
+          "size": 1627717632
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "6604052a-969c-0042-ce8a-ba3fb4472de0",
+      "custom_data": null
+    },
+    {
+      "name": "image",
+      "builder_type": "qemu",
+      "build_time": 1663291507,
+      "files": [
+        {
+          "name": "CentOS-7.3-compute-8358p.qcow2",
+          "size": 2448687104
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "be0ddca7-878c-37c6-51a1-5f24ba28f96b",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1663314146,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-8358p.qcow2",
+          "size": 1714225152
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "b669f207-5095-b9da-0298-de075d4bff80",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1663315261,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-8358p.qcow2",
+          "size": 1648754688
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "7109ab36-95c4-582e-28de-043510842652",
+      "custom_data": null
+    },
+    {
+      "name": "image",
+      "builder_type": "qemu",
+      "build_time": 1663316421,
+      "files": [
+        {
+          "name": "CentOS-7.3-compute-8358p.qcow2",
+          "size": 2431713280
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "dc34bd25-6628-c561-f954-cf5f63d3a499",
+      "custom_data": null
+    },
+    {
+      "name": "image",
+      "builder_type": "qemu",
+      "build_time": 1663317237,
+      "files": [
+        {
+          "name": "CentOS-7.3-compute-8358p.qcow2",
+          "size": 2428960768
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "e17693c6-b0b8-ca16-aea8-ef36b1d2df88",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1663837462,
+      "files": [
+        {
+          "name": "CentOS-6.5-shangtang-base-20220922085249.qcow2",
+          "size": 1777598464
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "73d49dfd-b9ec-a853-29a8-4f5eb780a955",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1675942599,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-20230209112408.qcow2",
+          "size": 1842282496
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "a12f228c-fdd1-d92a-d27b-fca0c7e05eda",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1675944091,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-20230209114611.qcow2",
+          "size": 1820131328
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "8189901a-9407-6db0-bc87-95e9f09a7f22",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1676254394,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-20230213020132.qcow2",
+          "size": 1809711104
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "70cf5c53-5989-1826-6a5c-0829251a3e6e",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1676286484,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-20230213105830.qcow2",
+          "size": 1929707520
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "d66c07b1-270d-3ccd-d50b-bcbcc0909e3c",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1676428144,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-20230215021343.qcow2",
+          "size": 2164588544
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "67f60b64-553a-6ae5-2d13-58c2b64b219e",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1676446299,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-20230215071446.qcow2",
+          "size": 2367946752
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "72257450-9d6e-ecfb-c4b4-ee5077155b4c",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1677468165,
+      "files": [
+        {
+          "name": "CentOS-7.5-3.0.2-gpt-20230227025932.qcow2",
+          "size": 2468937728
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "93e22182-3147-c871-5dce-8a4f0356fe59",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1677478834,
+      "files": [
+        {
+          "name": "CentOS-7.5-3.0.2-gpt-20230227055510.qcow2",
+          "size": 2443051008
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "6c37063e-73d7-d212-fcfd-280ac2897f78",
+      "custom_data": null
+    },
+    {
+      "name": "image",
+      "builder_type": "qemu",
+      "build_time": 1678956103,
+      "files": [
+        {
+          "name": "CentOS-6.5-compute-temp.qcow2",
+          "size": 4025090048
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "e4c4e062-1361-9b8c-5011-bb676e564672",
+      "custom_data": null
+    },
+    {
+      "name": "image",
+      "builder_type": "qemu",
+      "build_time": 1678968625,
+      "files": [
+        {
+          "name": "CentOS-6.5-compute-temp.qcow2",
+          "size": 4052615168
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "a524f2bf-8d70-572f-c93f-30b84e8775fc",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1681701708,
+      "files": [
+        {
+          "name": "CentOS-7.6-base-qingyang-latest.qcow2",
+          "size": 2602369024
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "9a0b6940-0632-c532-49fc-0f69c9608a9e",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1681720440,
+      "files": [
+        {
+          "name": "CentOS-7.6-base-qingyang-latest.qcow2",
+          "size": 2630877184
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "aa238e60-e795-200e-7cb0-d2cfa18bf806",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1681723692,
+      "files": [
+        {
+          "name": "CentOS-7.6-base-qingyang-latest.qcow2",
+          "size": 2619867136
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "4a600afc-daa7-052f-48ac-a764f38d9ce0",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1681729641,
+      "files": [
+        {
+          "name": "CentOS-7.6-base-qingyang-latest.qcow2",
+          "size": 2626355200
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "32044552-ca87-93ad-5584-29379dd35fb0",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1681736257,
+      "files": [
+        {
+          "name": "CentOS-7.6-base-qingyang-latest.qcow2",
+          "size": 2582773760
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "944d31d2-768e-79ba-5593-43b4aba580a4",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1681780494,
+      "files": [
+        {
+          "name": "CentOS-7.6-base-qingyang-latest.qcow2",
+          "size": 2522480640
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "f3936ff6-48fe-4cc6-b357-9c7fec34021e",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1681799498,
+      "files": [
+        {
+          "name": "CentOS-7.6-base-qingyang-latest.qcow2",
+          "size": 2558984192
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "82d5ed6f-a057-77b8-6743-6c67209ae433",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1681809152,
+      "files": [
+        {
+          "name": "CentOS-7.6-base-qingyang-latest.qcow2",
+          "size": 2555576320
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "a77a2c6a-a6c1-54b1-7631-2e119fd69cd0",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1681817223,
+      "files": [
+        {
+          "name": "CentOS-7.6-base-qingyang-latest.qcow2",
+          "size": 2603155456
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "41c3a10f-7137-36db-8cfb-ad1dbd705e01",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1681825498,
+      "files": [
+        {
+          "name": "CentOS-7.6-base-qingyang-latest.qcow2",
+          "size": 2608332800
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "90f2996e-9040-7259-2d3d-d2060e60f156",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1681867657,
+      "files": [
+        {
+          "name": "CentOS-7.6-base-qingyang-latest.qcow2",
+          "size": 2580807680
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "458b3336-63b9-297f-459b-27963cee81bf",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1681873029,
+      "files": [
+        {
+          "name": "CentOS-7.6-base-qingyang-latest.qcow2",
+          "size": 2239168512
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "809187d1-30c5-715f-09ca-be822844263e",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1681882600,
+      "files": [
+        {
+          "name": "CentOS-7.6-base-qingyang-latest.qcow2",
+          "size": 2330656768
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "586af557-129d-570c-6d3c-173265108cd1",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1681889247,
+      "files": [
+        {
+          "name": "CentOS-7.6-base-qingyang-latest.qcow2",
+          "size": 2332688384
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "a70884cd-c297-05fc-1393-b76038a3ea39",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1682313472,
+      "files": [
+        {
+          "name": "CentOS-7.6-base-qingyang-latest.qcow2",
+          "size": 2361196544
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "1161ee7a-617a-cf4b-8988-72028af96eca",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1683814677,
+      "files": [
+        {
+          "name": "CentOS-7.3-base-8358p.qcow2",
+          "size": 2787049472
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "132b3a83-ca1f-55a5-e48c-0bbd3b9ab7b5",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1684403613,
+      "files": [
+        {
+          "name": "CentOS-6.5-shangtang-base-20230518094013.qcow2",
+          "size": 1785069568
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "c497d22e-ad63-1af6-c110-60f60026b64f",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1684473953,
+      "files": [
+        {
+          "name": "CentOS-6.5-shangtang-base-20230519045113.qcow2",
+          "size": 1828913152
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "c0273d0b-a292-4a3b-25e8-c7e64ef3da78",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1684484742,
+      "files": [
+        {
+          "name": "CentOS-6.5-shangtang-base-20230519081021.qcow2",
+          "size": 1817182208
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "3515eb56-35ac-da1a-c397-7889d3295b62",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1684485904,
+      "files": [
+        {
+          "name": "CentOS-7.6-base-qingyang-latest.qcow2",
+          "size": 2326462464
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "63fd180b-eb5f-6e46-a245-a5262f7d36d4",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1684490758,
+      "files": [
+        {
+          "name": "CentOS-7.6-base-qingyang-latest.qcow2",
+          "size": 2258567168
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "b4b5f919-5483-0ff4-b7c0-3d2a0433b394",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1684558313,
+      "files": [
+        {
+          "name": "CentOS-7.6-base-qingyang-latest.qcow2",
+          "size": 2281832448
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "48ed514c-1c34-de85-3654-5c293da3a533",
+      "custom_data": null
+    },
+    {
+      "name": "image",
+      "builder_type": "qemu",
+      "build_time": 1684669683,
+      "files": [
+        {
+          "name": "CentOS-7.3-3.10.0-327.8.0.0-compute-20230521114122.qcow2",
+          "size": 2650341376
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "6fd652de-a13f-fbca-621a-419f8d3b667d",
+      "custom_data": null
+    },
+    {
+      "name": "image",
+      "builder_type": "qemu",
+      "build_time": 1685702741,
+      "files": [
+        {
+          "name": "CentOS-6.5-compute-temp.qcow2",
+          "size": 4081582080
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "a223056d-b6c8-2f5c-097c-a3854525fd52",
+      "custom_data": null
+    },
+    {
+      "name": "image",
+      "builder_type": "qemu",
+      "build_time": 1686640672,
+      "files": [
+        {
+          "name": "CentOS-7.5-3.0.2-gpt-20230613065612.qcow2",
+          "size": 2503671808
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "c60b8434-25e6-570d-5895-c50d21dc73d4",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1686648051,
+      "files": [
+        {
+          "name": "CentOS-7.5-3.0.2-msdos-20230613083759.qcow2",
+          "size": 2550398976
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "e7bc80e5-881e-d8e7-d300-b9e9d058a7d8",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1686728012,
+      "files": [
+        {
+          "name": "CentOS-7.5-3.0.2-msdos-20230614071956.qcow2",
+          "size": 2540634112
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "ade260b0-9724-5060-295d-dc1de217bb1d",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1687923598,
+      "files": [
+        {
+          "name": "CentOS-7.6-base-qingyang-latest.qcow2",
+          "size": 2248736768
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "f65dbfc9-6839-8aa4-c9af-77a673610d65",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1687938709,
+      "files": [
+        {
+          "name": "CentOS-7.6-base-3.0.2-3.10.957.el7-latest.qcow2",
+          "size": 2465529856
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "59b21d80-0b28-ceb6-605e-b28b826fbcde",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1687942655,
+      "files": [
+        {
+          "name": "CentOS-7.6-base-3.0.2-3.10.957.el7-latest.qcow2",
+          "size": 2362703872
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "45254e69-14f6-0087-2538-d05bedf16ba4",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1688038785,
+      "files": [
+        {
+          "name": "CentOS-7.6-base-3.0.2-5.4.116.el7-latest.qcow2",
+          "size": 2415263744
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "c88bd361-ba1b-a0c9-2aa1-a5150f85d39c",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1688079751,
+      "files": [
+        {
+          "name": "CentOS-7.6-base-3.0.2-5.4.116.el7-latest.qcow2",
+          "size": 2310144000
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "a18c3c00-6127-3dca-5628-4dbd3bd8c131",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1688089146,
+      "files": [
+        {
+          "name": "CentOS-7.6-source-3.0.2-5.4.116.el7-latest.qcow2",
+          "size": 2311782400
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "d26a3e81-6f3f-5483-d74c-01e1e6aac3c2",
+      "custom_data": null
+    },
+    {
+      "name": "image",
+      "builder_type": "qemu",
+      "build_time": 1689752808,
+      "files": [
+        {
+          "name": "CentOS-7.3-3.10.0-327.8.0.0-compute-20230719073746.qcow2",
+          "size": 2641362944
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "a7e54fba-fddf-a5d2-af16-30caacaa9949",
+      "custom_data": null
+    },
+    {
+      "name": "base",
+      "builder_type": "qemu",
+      "build_time": 1690475526,
+      "files": [
+        {
+          "name": "CentOS-7.6-base-3.0.2-3.10.957.el7-latest.qcow2",
+          "size": 3187539968
+        }
+      ],
+      "artifact_id": "VM",
+      "packer_run_uuid": "dbb015fc-e036-3ef1-912c-f1facfe9e1b8",
+      "custom_data": null
+    }
+  ],
+  "last_run_uuid": "dbb015fc-e036-3ef1-912c-f1facfe9e1b8"
+}

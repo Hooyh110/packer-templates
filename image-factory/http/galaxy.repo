@@ -1,0 +1,54 @@
+[galaxy]
+name=Galaxy Packages $releasever - $basearch
+baseurl=http://luna.galaxy.ksyun.com/galaxy/base/$releasever/$basearch/
+enabled=1
+gpgcheck=0
+
+[kec]
+name=KVM Packages for Enterprise Linux $releasever - $basearch
+baseurl=http://luna.galaxy.ksyun.com/galaxy/kec/$releasever/$basearch/
+enabled=1
+priority=1
+gpgcheck=0
+
+[cloudmonitor]
+name=CloudMonitor Packages for Enterprise Linux $releasever - $basearch
+baseurl=http://luna.galaxy.ksyun.com/galaxy/cloudmonitor/$releasever/$basearch/
+enabled=1
+gpgcheck=0
+
+[sdn]
+name=SDN Packages for Enterprise Linux $releasever - $basearch
+baseurl=http://luna.galaxy.ksyun.com/galaxy/sdn/$releasever/$basearch/
+enabled=1
+gpgcheck=0
+
+[ks3]
+name=KS3 Packages for Enterprise Linux $releasever - $basearch
+baseurl=http://luna.galaxy.ksyun.com/galaxy/ks3/$releasever/$basearch/
+enabled=1
+gpgcheck=0
+
+[ebs]
+name=EBS Packages for Enterprise Linux $releasever - $basearch
+baseurl=http://luna.galaxy.ksyun.com/galaxy/ebs/$releasever/$basearch/
+enabled=1
+gpgcheck=0
+
+[krds]
+name=KRDS Packages for Enterprise Linux $releasever - $basearch
+baseurl=http://luna.galaxy.ksyun.com/galaxy/paas/krds/$releasever/$basearch/
+enabled=1
+gpgcheck=0
+
+[console]
+name=KRDS Packages for Enterprise Linux $releasever - $basearch
+baseurl=http://luna.galaxy.ksyun.com/galaxy/console/$releasever/$basearch/
+enabled=1
+gpgcheck=0
+
+[paas]
+name=PaaS Packages for Enterprise Linux $releasever - $basearch
+baseurl=http://luna.galaxy.ksyun.com/galaxy/paas/paas/$releasever/$basearch/
+enabled=1
+gpgcheck=0

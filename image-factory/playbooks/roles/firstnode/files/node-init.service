@@ -1,0 +1,9 @@
+[Unit]
+Description=Initialize the first node for the first time
+After=network-online.target
+[Service]
+ExecStartPre=/usr/bin/test -e /dev/disk/by-label/penglai
+ExecStart=/node-init.sh
+Type=oneshot
+[Install]
+WantedBy=multi-user.target

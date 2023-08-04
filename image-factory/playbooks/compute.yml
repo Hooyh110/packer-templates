@@ -1,0 +1,17 @@
+---
+- name: Upgrade Kernal for nova compute node.
+  hosts: default
+  any_errors_fatal: true
+  gather_facts: yes
+  tasks:
+   - import_role:
+       name: kernel
+
+- name: Reboot node If requied and allowed
+  hosts: default
+  gather_facts: yes
+  any_errors_fatal: true
+  tasks:
+    - import_role:
+        name: galaxy_nodes
+        tasks_from: reboot

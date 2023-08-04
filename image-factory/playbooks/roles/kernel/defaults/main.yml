@@ -1,0 +1,16 @@
+---
+kvm_el6_grub_args:
+  - crashkernel=512M
+  - biosdevname=0
+  - SYSFONT=latarcyrheb-sun16
+  - LANG=en_US.UTF-8
+  - KEYTABLE=us
+  - intel_idle.max_cstate=0
+
+kernel_package:
+  - "kernel-{{ kvm_kernel_version }}"
+  #- "kernel-devel-{{ kvm_kernel_version }}"
+  - "kernel-devel"
+  - "{% if ansible_distribution_major_version == '6'%}linux-firmware-20150904-43.git6ebf5d5.el6.noarch{% endif %}"
+  - "{% if compute_module == '8358p'%}kernel-core-{{ kvm_kernel_version }}{% endif %}"
+  - "mlnx-ofa_kernel-modules-{{ mlnx_ofa_version }}"

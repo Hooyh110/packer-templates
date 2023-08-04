@@ -1,0 +1,49 @@
+#---
+#compute_module: standard
+#compute_software:
+#  standard:
+#    #kvm_kernel_version: "3.10.0-327.8.0.0.el7.cloud.x86_64"
+#    kvm_kernel_version: "3.10.0-957.el7.x86_64"
+#    mlnx_ofa_version: "4.2-OFED.4.2.1.2.0.1.gf8de107.kver.3.10.0-957.el7.x86_64"
+#  8358p:
+#    kvm_kernel_version: "3.10.0-962.el7.x86_64"
+#    mlnx_ofa_version: "5.2-OFED.5.2.1.0.4.1.kver.3.10.0-962.el7.x86_64"
+#
+#kvm_kernel_version: "{{ compute_software[compute_module]['kvm_kernel_version'] }}"
+#mlnx_ofa_version: "{{ compute_software[compute_module]['mlnx_ofa_version'] }}"
+---
+compute_module: standard
+compute_software:
+  standard:
+    kvm_kernel_version: "3.10.0-327.8.0.0.el7.cloud.x86_64"
+    mlnx_ofa_version: "4.2-OFED.4.2.1.2.0.1.gf8de107.kver.3.10.0_327.8.0.0.el7.cloud.x86_64"
+  8358p:
+    #kvm_kernel_version: "4.18.0-193.3.0.0.el7.cloud"
+    #mlnx_ofa_version: "5.2-OFED.5.2.1.0.4.1.kver.4.18.0_193.3.0.0.el7.cloud"
+    kvm_kernel_version: "4.18.0-193.2.0.0.el7.ksyun"
+    #mlnx_ofa_version: "5.0-OFED.5.0.2.1.8.1.g5f67178.kver.4.18.0_193.2.0.0.el7.ksyun"
+    mlnx_ofa_version: "5.4-OFED.5.4.3.0.3.1.kver.4.18.0_193.2.0.0.el7.ksyun"
+  icelake:
+    #kvm_kernel_version: "4.18.0-193.3.0.0.el7.cloud"
+    #mlnx_ofa_version: "5.2-OFED.5.2.1.0.4.1.kver.4.18.0_193.3.0.0.el7.cloud"
+    kvm_kernel_version: "4.18.0-80.11.3.0.el7.ksyun"
+    mlnx_ofa_version: "5.0-OFED.5.0.2.1.8.1.g5f67178.kver.4.18.0_193.1.0.1.el7.ksyun"
+  3.0.2:
+    kvm_kernel_version: "3.10.0-862.11.6.el7"
+    mlnx_ofa_version: "5.0-OFED.5.0.2.1.8.1.g5f67178.kver.3.10.0_862.3.0.0.el7.ksyun.x86_64"
+  6240_e2:
+    kvm_kernel_version: "3.10.0-327.9.0.1.el7.ksyun.x86_64"
+    mlnx_ofa_version: "4.2-OFED.4.2.1.2.0.1.gf8de107.kver.3.10.0_327.9.0.1.el7.ksyun.x86_64"
+  7.6:
+    kvm_kernel_version: "3.10.0-957.el7.x86_64"
+    mlnx_ofa_version: "4.2-OFED.4.2.1.2.0.1.gf8de107.kver.3.10.0-957.el7.x86_64"
+  paas_3.10.0_1062:
+    kvm_kernel_version: "3.10.0-1062.18.1.el7.x86_64"
+    mlnx_ofa_version: "4.5-OFED.4.5.1.0.1.1.gb4fdfac.kver.3.10.0_862.3.0.0.el7.ksyun.x86_64"
+  paas_3.10.0_1160:
+    kvm_kernel_version: "3.10.0-1160.53.1.el7.x86_64"
+    mlnx_ofa_version: "4.5-OFED.4.5.1.0.1.1.gb4fdfac.kver.3.10.0_862.3.0.0.el7.ksyun.x86_64"
+
+
+kvm_kernel_version: "{{ compute_software[compute_module]['kvm_kernel_version'] }}"
+mlnx_ofa_version: "{{ compute_software[compute_module]['mlnx_ofa_version'] }}"

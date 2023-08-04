@@ -1,0 +1,33 @@
+---
+- name: Copy docker-ce.repo
+  copy:
+    dest: /etc/yum.repos.d/
+    src: docker-ce.repo
+
+- name: install docker
+  yum:
+    name: docker-ce
+    state: present
+
+- name: Copy files
+  copy:
+    dest: "{{ item.dest }}"
+    src: "{{ item.name }}"
+    mode: "{{ item.mode | default(omit) }}"
+  loop:
+    - name: node-init.sh
+      dest: /
+      mode: "0755"
+    - name: node-init.service
+      dest: /usr/lib/systemd/system/
+    - name: daemon.json
+      dest: /etc/docker/
+
+- name: enable docker/node-init service
+  systemd:
+    name: "{{ item }}"
+    enabled: yes
+    daemon_reload: yes
+  loop:
+    - docker
+    - node-init

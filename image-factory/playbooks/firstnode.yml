@@ -1,0 +1,9 @@
+---
+- import_playbook: compute.yml
+
+- hosts: default
+  any_errors_fatal: true
+  gather_facts: yes
+  tasks:
+   - import_role:
+       name: firstnode

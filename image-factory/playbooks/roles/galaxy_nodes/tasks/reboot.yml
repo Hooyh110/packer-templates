@@ -1,0 +1,29 @@
+---
+- when:
+  - not (allow_reboot|bool)
+  - reboot_required is defined
+  - reboot_required|bool
+  block:
+    - debug:
+        msg: |
+          Reboot is required, and allow_reboot is set to False.
+          Please reboot nodes.
+    - meta: end_play
+
+- when:
+    - reboot_required is defined
+    - reboot_required | bool
+    - allow_reboot | bool
+  block:
+  - name: Reboot if required
+    shell: "sleep 5 && reboot"
+    become: true
+    async: 1
+    poll: 0
+    ignore_errors: true
+  - name: Wait for 360 seconds, start checking after 30 seconds, until the system reachable
+    wait_for_connection:
+      connect_timeout: 10
+      sleep: 1
+      delay: 30
+      timeout: 360
