@@ -51,7 +51,7 @@
     },
     {
       "destination": "/etc/cloud/",
-      "source": [
+      "sources": [
         "http/cloud.cfg",
         "http/ds-identify.cfg"
       ],
