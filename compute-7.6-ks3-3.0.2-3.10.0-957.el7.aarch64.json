@@ -4,7 +4,7 @@
       "boot_command": [
         "c<wait>",
         "linux /images/pxeboot/vmlinuz inst.stage2=hd:LABEL=CentOS\\x207\\x20aarch64 ",
-        "biosdevname=0 net.ifnames=0 ",
+        "text biosdevname=0 net.ifnames=0 ",
         "ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos-7/ks-aarch64.cfg<enter>",
         "initrd /images/pxeboot/initrd.img<enter>",
         "boot<enter><wait>"
