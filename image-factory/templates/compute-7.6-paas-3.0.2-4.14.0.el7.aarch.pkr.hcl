@@ -12,7 +12,7 @@ locals {
   os_version    = 7.6
   timestamp     = formatdate("YYYYMMDDhhmmss", timestamp())
   image_id      = try(var.git_commit_id, local.timestamp)
-  img_name      = "${local.os_type}-${local.os_version}-paas-3.0.2-3.10.1062.18.1.el7-aarch64-latest.qcow2"
+  img_name      = "${local.os_type}-${local.os_version}-paas-3.0.2-4.14.0.el7-aarch64-latest.qcow2"
 }
 
 source "qemu" "base" {
