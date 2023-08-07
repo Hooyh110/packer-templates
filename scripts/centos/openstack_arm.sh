@@ -1,10 +1,5 @@
 #!/bin/bash -eux
 
-if [ $(uname -m)=="ppc64" -o $(uname -m)=="ppc64le" ]
-  then
-    yum -y install ppc64-diag
-fi
-
 yum -y install --skip-broken  dracut-modules-growroot \
   cloud-utils-growpart gdisk
 dracut -f

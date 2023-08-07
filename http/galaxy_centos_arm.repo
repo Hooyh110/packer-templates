@@ -1,0 +1,45 @@
+[base]
+name=CentOS-$releasever - Base
+baseurl=http://luna.galaxy.ksyun.com/galaxy_arm/Arch/base/
+gpgcheck=0
+enabled=1
+
+[centos]
+name=CentOS-$releasever - Centos
+baseurl=http://luna.galaxy.ksyun.com/galaxy_arm/Arch/centos/
+gpgcheck=0
+enabled=1
+
+
+[update]
+name=CentOS-$releasever - Updates
+baseurl=http://luna.galaxy.ksyun.com/galaxy_arm/Arch/update/
+gpgcheck=0
+enabled=1
+
+[extras]
+name=CentOS-$releasever - Extras
+baseurl=http://luna.galaxy.ksyun.com/galaxy_arm/Arch/extras/
+gpgcheck=0
+
+
+[epel]
+name=Extra Packages for Enterprise Linux $releasever - $basearch
+baseurl=http://luna.galaxy.ksyun.com/galaxy_arm/Arch/epel/
+failovermethod=priority
+gpgcheck=0
+enabled=1
+
+[kec]
+name=KVM Packages for Enterprise Linux $releasever - $basearch
+baseurl=http://luna.galaxy.ksyun.com/galaxy_arm/Arch/kec/
+enabled=1
+priority=1
+gpgcheck=0
+
+
+[kvm_yum]
+name=Galaxy Packages $releasever - $basearch
+baseurl=http://luna.galaxy.ksyun.com/galaxy_arm/Arch/kvm_yum/
+enabled=1
+gpgcheck=0

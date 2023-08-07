@@ -41,7 +41,7 @@
   "provisioners": [
     {
       "destination": "/etc/yum.repos.d/galaxy.repo",
-      "source": "http/galaxy.repo",
+      "source": "http/galaxy_centos_arm.repo",
       "type": "file"
     },
     {
@@ -61,9 +61,6 @@
       "execute_command": "echo 'centos' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
       "scripts": [
         "scripts/centos/repo.sh",
-        "scripts/centos/openstack.sh",
-        "scripts/centos/cleanup.sh",
-        "scripts/common/minimize.sh",
         "scripts/common/sshd.sh",
         "scripts/common/init_rc.sh"
       ],

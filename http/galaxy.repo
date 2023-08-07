@@ -1,6 +1,3 @@
-
-
-
 [base]
 name=CentOS-7 - Base - mirrors.aliyun.com
 failovermethod=priority
