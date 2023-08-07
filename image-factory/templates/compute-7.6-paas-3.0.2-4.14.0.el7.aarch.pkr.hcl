@@ -18,7 +18,7 @@ locals {
 source "qemu" "base" {
   accelerator = "kvm"
     boot_command = [
-      "<wait>",
+      "<tab> text ",
       "c",
       "<esc><wait>",
       "c",
