@@ -18,9 +18,13 @@ locals {
 source "qemu" "base" {
   accelerator = "kvm"
   boot_command = [
-    "<tab> text",
+    "c<wait>",
+    "linux /images/pxeboot/vmlinuz inst.stage2=hd:LABEL=CentOS\\x207\\x20aarch64 ",
+    "text biosdevname=0 net.ifnames=0 ",
     "ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/${local.anwserfile}<enter>",
-    "<enter><wait>"
+    "initrd /images/pxeboot/initrd.img<enter>",
+    "boot<enter><wait>"
+
   ]
 
   boot_wait              = "1s"
