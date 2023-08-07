@@ -19,8 +19,8 @@ source "qemu" "base" {
   accelerator = "kvm"
     boot_command = [
       "<tab> text ",
-      "set default=0",
-      "set timeout=10",
+      "set default=0<enter>",
+      "set timeout=10<enter>",
       "<esc><wait>",
       "c",
       "set default=0",
