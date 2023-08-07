@@ -24,7 +24,7 @@ source "qemu" "base" {
                                                       // 输入 Linux 内核引导命令，并传递参数
         "initrd /images/pxeboot/initrd.img<enter>",    // 指定 initrd 镜像路径
         "<wait>",                                      // 等待虚拟机启动
-        "\<ctrl_r>",                                    // 模拟按下 "Ctrl+r" 键
+        "<ctrl_r>",                                    // 模拟按下 "Ctrl+r" 键
         "<enter>",                                     // 模拟按下 "Enter" 键
         "boot<enter>",                                 // 确认启动
         "<wait>"                                      // 等待虚拟机启动完成
