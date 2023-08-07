@@ -21,6 +21,7 @@ source "qemu" "base" {
       "<wait>",
       "c",
       "<esc><wait>",
+      "c",
       "set default='0'",
       "set timeout=10",
       "<tab> text ",
