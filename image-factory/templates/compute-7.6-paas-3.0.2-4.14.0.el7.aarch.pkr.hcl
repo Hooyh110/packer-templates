@@ -20,11 +20,11 @@ source "qemu" "base" {
   boot_command = [
         "<wait>",                                      // 等待虚拟机启动
         "c",                                           // 模拟按下 "c" 键
-        "linux /images/pxeboot/vmlinuz inst.stage2=hd:LABEL=CentOS\\x207\\x20aarch64 text biosdevname=0 net.ifnames=0 ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/${local.anwserfile}<enter>",
+        "<tab>   linux /images/pxeboot/vmlinuz inst.stage2=hd:LABEL=CentOS\\x207\\x20aarch64 text biosdevname=0 net.ifnames=0 ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/${local.anwserfile}<enter>",
                                                       // 输入 Linux 内核引导命令，并传递参数
-        "initrd /images/pxeboot/initrd.img<enter>",    // 指定 initrd 镜像路径
+        "<tab>    initrd /images/pxeboot/initrd.img<enter>",    // 指定 initrd 镜像路径
         "<wait>",                                      // 等待虚拟机启动
-        "<ctrl_x>",                                    // 模拟按下 "Ctrl+r" 键
+        "<ctrlx>",                                    // 模拟按下 "Ctrl+x" 键
         "<enter>",                                     // 模拟按下 "Enter" 键
         "boot<enter>",                                 // 确认启动
         "<wait>"                                      // 等待虚拟机启动完成
