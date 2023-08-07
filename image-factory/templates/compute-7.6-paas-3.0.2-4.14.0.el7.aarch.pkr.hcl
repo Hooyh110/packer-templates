@@ -18,9 +18,12 @@ locals {
 source "qemu" "base" {
   accelerator = "kvm"
     boot_command = [
-    "<tab> text ",
-    "ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/${local.anwserfile} ",
-    "<enter><wait>"
+      "<esc><wait>",
+      "set default='0'",
+      "set timeout=10",
+      "<tab>   linux /images/pxeboot/vmlinuz inst.stage2=hd:LABEL=CentOS\\x207\\x20aarch64 text biosdevname=0 net.ifnames=0 ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/${local.anwserfile}<enter>", // 输入 Linux 内核引导命令，并传递参数
+      "<tab>    initrd /images/pxeboot/initrd.img<enter>",    // 指定 initrd 镜像路径
+      "<enter><wait>"
   ]
 //  boot_command = [
 //        "<wait>",                                      // 等待虚拟机启动
