@@ -23,8 +23,6 @@ source "qemu" "base" {
       "set timeout=10<enter>",
       "<esc><wait>",
       "c",
-      "set default=0",
-      "set timeout=10",
       "linux /images/pxeboot/vmlinuz inst.stage2=hd:LABEL=CentOS\\x207\\x20aarch64  text ",
       "biosdevname=0 net.ifnames=0 ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/${local.anwserfile}<enter>", // 输入 Linux 内核引导命令，并传递参数
       "initrd /images/pxeboot/initrd.img<enter>",
