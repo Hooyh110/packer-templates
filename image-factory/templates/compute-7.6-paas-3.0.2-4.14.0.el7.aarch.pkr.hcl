@@ -19,12 +19,8 @@ source "qemu" "base" {
   accelerator = "kvm"
     boot_command = [
       "<tab> text ",
-      "c",
-      "<esc><wait>",
-      "c",
-      "set default='0'",
+      "set default=0",
       "set timeout=10",
-      "<tab> text ",
       "ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/${local.anwserfile}<enter>", // 输入 Linux 内核引导命令，并传递参数
       "boot<enter><wait>"
   ]
