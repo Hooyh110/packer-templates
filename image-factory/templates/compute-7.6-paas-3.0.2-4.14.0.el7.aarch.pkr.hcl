@@ -17,11 +17,11 @@ locals {
 
 source "qemu" "base" {
   accelerator = "kvm"
-    boot_command = [
-    "<tab> text ",
-    "ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/${local.anwserfile} ",
-    "<enter><wait>"
-  ]
+//    boot_command = [
+//    "<tab> text ",
+//    "ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/${local.anwserfile} ",
+//    "<enter><wait>"
+//  ]
 //  boot_command = [
 //        "<wait>",                                      // 等待虚拟机启动
 //        "c",                                           // 模拟按下 "c" 键
