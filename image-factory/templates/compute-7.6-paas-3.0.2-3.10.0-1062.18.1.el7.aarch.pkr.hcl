@@ -42,7 +42,7 @@ source "qemu" "base" {
   net_device             = "virtio-net"
   output_directory       = "output/"
   qemu_binary            = "/usr/libexec/qemu-kvm"
-  qemuargs               = [["-m", "8192"], ["-smp", "8"]]
+  qemuargs               = [["-m", "8192"], ["-smp", "8"], ["-machine", "gic-version=3,accel=kvm"],]
   shutdown_command       = "shutdown -h now"
   ssh_username           = "${local.user_name}"
   ssh_password           = "${local.user_password}"
