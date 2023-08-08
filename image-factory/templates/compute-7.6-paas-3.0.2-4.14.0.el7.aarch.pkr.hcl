@@ -21,7 +21,8 @@ source "qemu" "base" {
       "<esc><wait>",
       "c",
       "linux /images/pxeboot/vmlinuz inst.stage2=hd:LABEL=CentOS\\x207\\x20aarch64 ",
-      "inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/${local.anwserfile} inst.geoloc=0 console=ttyAMA0,115200 earlycon console=tty0 <enter>",
+      "ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/${local.anwserfile}<enter>",
+//      "inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/${local.anwserfile} inst.geoloc=0 console=ttyAMA0,115200 earlycon console=tty0 <enter>",
       "initrd /images/pxeboot/initrd.img<enter>",
       "boot<enter><wait>"
   ]
