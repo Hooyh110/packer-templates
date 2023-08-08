@@ -6,9 +6,6 @@ locals {
   anwserfile    = "anwserfiles/ks_centos_7_aarch64.cfg"
   iso_checksum  = "file:http://luna.galaxy.ksyun.com/images/iso/sha1sum.txt"
   iso_url       = "http://luna.galaxy.ksyun.com/images/iso/CentOS-7-aarch64-Everything-1810.iso"
-
-  #iso_checksum  = "file:http://10.91.128.61/images/baremetal/base/md5sum.txt"
-  #iso_url       = "http://10.91.128.61/images/baremetal/base/CentOS-7.6-base-shangtang.qcow2"
   os_version    = 7.6
   timestamp     = formatdate("YYYYMMDDhhmmss", timestamp())
   image_id      = try(var.git_commit_id, local.timestamp)
