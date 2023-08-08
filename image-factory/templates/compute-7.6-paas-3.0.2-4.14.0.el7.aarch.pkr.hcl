@@ -3,7 +3,7 @@ locals {
   node_type     = "base"
   user_name     = "root"
   user_password = "Kingsoft123"
-  anwserfile    = "anwserfiles/test.cfg"
+  anwserfile    = "anwserfiles/test_arm.cfg"
   iso_checksum  = "file:http://10.178.88.1/images/iso/sha1sum.txt"
   iso_url       = "http://10.178.88.1/images/iso/CentOS-7-aarch64-Everything-1810.iso"
   os_version    = 7.6
