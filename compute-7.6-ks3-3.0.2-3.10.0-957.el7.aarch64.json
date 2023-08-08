@@ -32,7 +32,7 @@
       "ssh_password": "Kingsoft123",
       "ssh_port": 22,
       "ssh_username": "root",
-      "ssh_wait_timeout": "10000s",
+      "ssh_wait_timeout": "1000000s",
       "type": "qemu",
       "vm_name": "compute-7.6-ks3-3.0.2-3.10.0-957.el7.aarch64-openstack",
       "vnc_bind_address": "0.0.0.0"
