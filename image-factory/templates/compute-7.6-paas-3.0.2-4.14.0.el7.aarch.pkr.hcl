@@ -14,18 +14,18 @@ locals {
 
 source "qemu" "base" {
   accelerator = "kvm"
-//    boot_command = [
-//      "<tab> text ",
-//      "set default=0<enter>",
-//      "set timeout=10<enter>",
-//      "<esc><wait>",
-//      "c",
-//      "linux /images/pxeboot/vmlinuz inst.stage2=hd:LABEL=CentOS\\x207\\x20aarch64 ",
-//      "ip=dhcp ",
-//      "inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/${local.anwserfile} inst.text inst.debug<enter>",
-//      "initrd /images/pxeboot/initrd.img<enter>",
-//      "boot<enter><wait>"
-//  ]
+    boot_command = [
+      "<tab> text ",
+      "set default=0<enter>",
+      "set timeout=10<enter>",
+      "<esc><wait>",
+      "c",
+      "linux /images/pxeboot/vmlinuz inst.stage2=hd:LABEL=CentOS\\x207\\x20aarch64 ",
+      "ip=dhcp ",
+      "inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/${local.anwserfile} inst.text inst.debug<enter>",
+      "initrd /images/pxeboot/initrd.img<enter>",
+      "boot<enter><wait>"
+  ]
 //  boot_command = [
 //        "<wait>",                                      // 等待虚拟机启动
 //        "c",                                           // 模拟按下 "c" 键
