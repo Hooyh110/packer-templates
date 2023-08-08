@@ -16,6 +16,7 @@ source "qemu" "base" {
   accelerator = "kvm"
     boot_command = [
       "<tab> text ",
+      "test",
       "<esc><wait>",
       "c",
       "linux /images/pxeboot/vmlinuz inst.stage2=hd:LABEL=CentOS\\x207\\x20aarch64 ",
