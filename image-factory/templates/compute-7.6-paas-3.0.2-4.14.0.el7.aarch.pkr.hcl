@@ -21,7 +21,7 @@ source "qemu" "base" {
       "<esc><wait>",
       "c",
       "linux /images/pxeboot/vmlinuz inst.stage2=hd:LABEL=CentOS\\x207\\x20aarch64 ",
-      "ip=dhcp inst.repo=http://luna.galaxy.ksyun.com/arm_centos/7.6.1810 ",
+      "ip=dhcp ",
       "inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/${local.anwserfile} inst.text inst.debug<enter>",
       "initrd /images/pxeboot/initrd.img<enter>",
       "boot<enter><wait>"
