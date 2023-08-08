@@ -5,7 +5,7 @@ locals {
   user_password = "Kingsoft123"
   anwserfile    = "anwserfiles/ks_aarch64.cfg"
   iso_checksum  = "file:http://10.178.88.1/images/iso/sha1sum.txt"
-  iso_url       = "http://10.178.88.1/images/iso/CentOS-7-aarch64-Everything-new.iso"
+  iso_url       = "http://10.178.88.1/images/iso/CentOS-7-aarch64-Everything-1810.iso"
   os_version    = 7.6
   timestamp     = formatdate("YYYYMMDDhhmmss", timestamp())
   image_id      = try(var.git_commit_id, local.timestamp)
@@ -21,7 +21,7 @@ source "qemu" "base" {
       "<esc><wait>",
       "c",
       "linux /images/pxeboot/vmlinuz inst.stage2=hd:LABEL=CentOS\\x207\\x20aarch64 ",
-      "inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/${local.anwserfile} console=ttyAMA0,115200 earlycon console=tty0 <enter>",
+      "inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/${local.anwserfile} inst.text inst.debug console=ttyAMA0,115200 earlycon console=tty0 <enter>",
       "initrd /images/pxeboot/initrd.img<enter>",
       "boot<enter><wait>"
   ]
