@@ -45,6 +45,11 @@
       "type": "file"
     },
     {
+      "destination": "/etc/yum.repos.d/docker-ce.repo",
+      "source": "http/docker-ce.repo",
+      "type": "file"
+    },
+    {
       "destination": "/etc/cloud/",
       "sources": [
         "http/cloud.cfg",
