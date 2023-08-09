@@ -65,12 +65,12 @@ export LC_ALL=C.UTF-8
 
 DATA_PATH=/data/packages
 
-if [[ ! -d "$DATA_PATH" ]]
+if [[ ! -d "\$DATA_PATH" ]]
 then
-    mkdir -p "$DATA_PATH"
+    mkdir -p "\$DATA_PATH"
 fi
 
-if ! mountpoint -q "$DATA_PATH"
+if ! mountpoint -q "\$DATA_PATH"
 then
     mount /dev/disk/by-label/penglai "\$DATA_PATH"
 fi
