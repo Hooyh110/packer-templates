@@ -50,6 +50,11 @@
       "type": "file"
     },
     {
+      "destination": "/root/e2fsprogs-1.43.1.tar.gz",
+      "source": "http/soft/e2fsprogs-1.43.1.tar.gz",
+      "type": "file"
+    },
+    {
       "destination": "/etc/cloud/",
       "sources": [
         "http/cloud.cfg",

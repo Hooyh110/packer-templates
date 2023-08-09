@@ -10,6 +10,32 @@ set -o pipefail
 function packages() {
     packages=(
         rsync
+        jq
+        tar
+        vim
+        zip
+        zlib
+        wget
+        tree
+        unzip
+        lldpd
+        lrzsz
+        parted
+        tcpdump
+        ethtool
+        pciutils
+        nvme-cli
+        ipmitool
+        rng-tools
+        dmidecode
+        traceroute
+        util-linux-ng
+        smartmontools
+        bash-completion
+        lldp
+        cloud-init
+        genisoimage
+        qemu-img
     )
     yum install ${packages[*]} -y
 }
@@ -18,7 +44,7 @@ function docker() {
     yum remove docker docker-common docker-selinux docker-engine -y
     yum install -y yum-utils device-mapper-persistent-data lvm2 docker-ce rsync lldp
     systemctl enable docker.service
-    mkdir /etc/docker/
+    mkdir -p /etc/docker/
     cat <<EOF >/etc/docker/daemon.json
 {
   "insecure-registries": ["127.0.0.1"],
