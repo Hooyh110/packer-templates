@@ -55,20 +55,20 @@
       "type": "file"
     },
     {
-      "destination": "/etc/cloud/",
-      "sources": [
-        "http/cloud.cfg",
-        "http/ds-identify.cfg"
-      ],
-      "type": "file"
-    },
-    {
       "execute_command": "echo 'centos' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
       "scripts": [
         "scripts/centos/repo.sh",
         "scripts/firstnode/55-service.sh"
       ],
       "type": "shell"
+    },
+    {
+      "destination": "/etc/cloud/",
+      "sources": [
+        "http/cloud.cfg",
+        "http/ds-identify.cfg"
+      ],
+      "type": "file"
     }
   ],
   "variables": {
