@@ -32,7 +32,7 @@ enabled=1
 
 [kec]
 name=KVM Packages for Enterprise Linux $releasever - $basearch
-baseurl=http://luna.galaxy.ksyun.com/galaxy_arm/Arch/kec/
+baseurl=http://luna.galaxy.ksyun.com/galaxy_arm/Arch/kec/$releasever/$basearch
 enabled=1
 priority=1
 gpgcheck=0
