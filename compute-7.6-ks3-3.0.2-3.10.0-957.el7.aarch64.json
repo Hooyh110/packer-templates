@@ -16,8 +16,8 @@
       "headless": true,
       "http_directory": "http",
       "iso_checksum_type": "sha256",
-      "iso_checksum": "ad0a58bf7c2be9c27827560d3f04e11b83be65320fb9e52d9c4f71ee60a67a25",
-      "iso_url": "http://luna.galaxy.ksyun.com/images/iso/CentOS-7-aarch64-Everything-1810.iso",
+      "iso_checksum": "864596b2fb971c8d8c0f3618981cca4725f6c2347f6eb2f130e0aefa3413c0ef",
+      "iso_url": "http://luna.galaxy.ksyun.com/images/iso/CentOS-7-aarch64-Minimal-1810.iso",
       "output_directory": "compute-7.6-ks3-3.0.2-3.10.0-957.el7.aarch64-openstack",
       "qemuargs": [
         [ "-m", "8072M" ],
@@ -45,11 +45,6 @@
       "type": "file"
     },
     {
-      "destination": "/usr/local/sshd.sh",
-      "source": "scripts/common/sshd.sh",
-      "type": "file"
-    },
-    {
       "destination": "/etc/cloud/",
       "sources": [
         "http/cloud.cfg",
@@ -61,8 +56,7 @@
       "execute_command": "echo 'centos' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
       "scripts": [
         "scripts/centos/repo.sh",
-        "scripts/common/sshd.sh",
-        "scripts/common/init_rc.sh"
+        "image-factory/scripts/55-firstnode-service-hyh.bash"
       ],
       "type": "shell"
     }
