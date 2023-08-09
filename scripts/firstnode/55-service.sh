@@ -36,6 +36,7 @@ function packages() {
         cloud-init
         genisoimage
         qemu-img
+        gcc
     )
     yum install ${packages[*]} -y
 }
