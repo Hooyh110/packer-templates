@@ -56,7 +56,7 @@
       "execute_command": "echo 'centos' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
       "scripts": [
         "scripts/centos/repo.sh",
-        "image-factory/scripts/55-firstnode-service-hyh.bash"
+        "scripts/firstnode/55-service.sh"
       ],
       "type": "shell"
     }
