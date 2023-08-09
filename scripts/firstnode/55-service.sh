@@ -56,7 +56,7 @@ EOF
 }
 
 function node-init() {
-    cat > /node/init.sh << EOF
+    cat > /node-init.sh << EOF
 #!/bin/bash
 set -eux
 set -o pipefail
