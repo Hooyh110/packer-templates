@@ -23,6 +23,6 @@ packages=(
     dracut-modules-growroot
 )
    # cloud-init-18.5
-
+sleep 30m
 yum install ${packages[*]} -y
 dracut -f
