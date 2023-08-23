@@ -4,8 +4,8 @@ locals {
   user_name     = "root"
   user_password = "Kingsoft123"
   anwserfile    = "anwserfiles/ks_centos_6.cfg"
-  iso_checksum  = "c528d4bbac463589926fd1744ef115c4"
-  iso_url       = "http://luna.galaxy.ksyun.com/images/baremetal-images/CentOS-6.5-sdn-dpdk-3.10.0-123.6.1.el6.ksyun.x86_64.qcow2"
+  iso_checksum  = "file:http://10.91.128.61/images/iso/sha1sum.txt"
+  iso_url       = "http://10.91.128.61/images/iso/CentOS-6.5-x86_64-minimal.iso"
   os_version    = 6.5
   timestamp     = regex_replace(timestamp(), "[- TZ:]", "")
   image_id      = try(var.git_commit_id, local.timestamp)
@@ -82,7 +82,7 @@ build {
 
    provisioner "shell" {
      scripts = [
-       "scripts/install.d/20-kernel-downgrade-el6.bash",
+       "scripts/install.d/20-kernel-update-el6.bash",
        "scripts/install.d/10-ssh-config.bash",
        "scripts/install.d/20-base-packages.bash",
        "scripts/install.d/90-raid-drive-megaraid_sas.bash",
