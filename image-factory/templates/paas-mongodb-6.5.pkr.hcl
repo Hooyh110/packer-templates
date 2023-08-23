@@ -87,6 +87,7 @@ build {
 
   provisioner "shell" {
     scripts = [
+      "scripts/install.d/20-kernel-update-el6.bash",
       "scripts/install.d/10-ssh-config.bash",
       "scripts/install.d/20-base-packages.bash",
     ]
