@@ -12,7 +12,7 @@ locals {
   img_name      = "${local.os_type}-${local.os_version}-${local.node_type}-${local.image_id}.qcow2"
 }
 
-source "qemu" "image" {
+source "qemu" "base" {
   accelerator = "kvm"
   boot_command = [
     "<tab> text ",
