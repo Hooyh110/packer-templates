@@ -19,7 +19,6 @@ source "qemu" "base" {
     "ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/${local.anwserfile} ",
     "<enter><wait>"
   ]
-  accelerator            = "kvm"
   boot_wait              = "1s"
   cpus                   = 8
   disk_size              = "51200"
