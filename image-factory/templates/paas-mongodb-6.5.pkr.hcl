@@ -62,7 +62,7 @@ build {
    provisioner "shell" {
      scripts = [
        "scripts/pre-install.d/00-repo.bash",
-       "scripts/pre-install.d/10-centos6-cloud-init.bash",
+       "scripts/pre-install.d/10-cloud-init-el6.bash",
      ]
      expect_disconnect = true
    }
