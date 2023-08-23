@@ -98,7 +98,7 @@ build {
   provisioner "shell" {
     scripts = [
       "scripts/install.d/90-raid-drive-megaraid_sas.bash",
-      "scripts/install.d/90-raid-drive-mpt3sas.bash",
+//      "scripts/install.d/90-raid-drive-mpt3sas.bash",
       "scripts/install.d/90-network-drive-x722.bash",
       #"scripts/install.d/90-network-drive-i40e.bash",
     ]
