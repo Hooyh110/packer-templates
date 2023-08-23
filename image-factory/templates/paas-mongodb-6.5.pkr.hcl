@@ -55,10 +55,10 @@ build {
     source      = "http/galaxy.repo"
   }
 
-  provisioner "file" {
-    destination = "/usr/local/"
-    source      = "http/soft/i40e-2.1.29u.tar.gz"
-  }
+//  provisioner "file" {
+//    destination = "/usr/local/"
+//    source      = "http/soft/i40e-2.1.29u.tar.gz"
+//  }
 
   provisioner "file" {
     destination = "/root/"
