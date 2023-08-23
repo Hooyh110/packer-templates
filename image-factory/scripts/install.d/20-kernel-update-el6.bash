@@ -7,5 +7,8 @@ packages=(
   kernel-debuginfo-3.10.0-123.6.el6.ksyun.x86_64
 )
 yum install -y ${packages[*]} --skip-broken
-grub-set-default 0
+
+sed -i "s/GRUB_DEFAULT=saved/GRUB_DEFAULT=0/g" /etc/default/grub
+grub2-mkconfig -o /boot/grub2/grub.cfg
+
 reboot
