@@ -31,7 +31,6 @@ packages=(
     smartmontools
     bash-completion
     lldp
-    cloud-init
     kernel-devel-$(uname -r)
     libelf-dev
     libelf-devel
