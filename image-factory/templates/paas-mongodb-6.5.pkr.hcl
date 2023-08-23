@@ -46,9 +46,6 @@ source "qemu" "base" {
   vnc_bind_address       = "0.0.0.0"
   vnc_port_max           = "5980"
   vnc_port_min           = "5974"
-  qemu_img_args  {
-      resize = ["--shrink"]
-  }
 }
 
 build {
