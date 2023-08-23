@@ -49,7 +49,7 @@ source "qemu" "base" {
 
 build {
   name    = "base"
-  sources = ["source.qemu.image"]
+  sources = ["source.qemu.base"]
 
   provisioner "file" {
     destination = "/etc/yum.repos.d/galaxy.repo"
