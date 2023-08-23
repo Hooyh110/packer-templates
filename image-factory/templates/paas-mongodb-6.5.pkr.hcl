@@ -71,17 +71,18 @@ build {
      destination = "/etc/cloud/cloud.cfg"
      source      = "http/cloud.cfg"
    }
-   provisioner "ansible" {
-     inventory_directory = "inventory/"
-     playbook_file       = "playbooks/compute.yml"
-     extra_arguments = [
-       "-e compute_module=paas_mongo_6_5",
-       "-vvv"
-  ]
-}
+//   provisioner "ansible" {
+//     inventory_directory = "inventory/"
+//     playbook_file       = "playbooks/compute.yml"
+//     extra_arguments = [
+//       "-e compute_module=paas_mongo_6_5",
+//       "-vvv"
+//     ]
+//   }
 
    provisioner "shell" {
      scripts = [
+       "scripts/install.d/20-kernel-downgrade-el6.bash",
        "scripts/install.d/10-ssh-config.bash",
        "scripts/install.d/20-base-packages.bash",
        "scripts/install.d/90-raid-drive-megaraid_sas.bash",

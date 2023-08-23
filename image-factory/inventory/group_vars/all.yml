@@ -43,6 +43,9 @@ compute_software:
   paas_3.10.0_1160:
     kvm_kernel_version: "3.10.0-1160.53.1.el7.x86_64"
     mlnx_ofa_version: "4.5-OFED.4.5.1.0.1.1.gb4fdfac.kver.3.10.0_862.3.0.0.el7.ksyun.x86_64"
+  paas_mongo_6_5:
+    kvm_kernel_version: "3.10.0-862.11.6.el6.x86_64"
+    mlnx_ofa_version: "4.5-OFED.4.5.1.0.1.1.gb4fdfac.kver.3.10.0_862.11.6.el7.ksyun.x86_64"
 
 
 kvm_kernel_version: "{{ compute_software[compute_module]['kvm_kernel_version'] }}"
