@@ -13,6 +13,12 @@ locals {
 }
 
 source "qemu" "image" {
+  accelerator = "kvm"
+  boot_command = [
+    "<tab> text ",
+    "ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/${local.anwserfile} ",
+    "<enter><wait>"
+  ]
   accelerator            = "kvm"
   boot_wait              = "1s"
   cpus                   = 8
