@@ -1,15 +1,15 @@
 locals {
   os_type       = "CentOS"
-  node_type     = "paas-mongodb"
+  node_type     = "base"
   user_name     = "root"
   user_password = "Kingsoft123"
   anwserfile    = "anwserfiles/ks_centos_6.cfg"
-  iso_checksum  = "file:http://10.91.128.61/images/iso/sha1sum.txt"
-  iso_url       = "http://10.91.128.61/images/iso/CentOS-6.5-x86_64-minimal.iso"
+  iso_checksum  = "file:http://luna.galaxy.ksyun.com/images/iso/sha1sum.txt"
+  iso_url       = "http://luna.galaxy.ksyun.com/images/iso/CentOS-6.5-x86_64-minimal.iso"
   os_version    = 6.5
-  timestamp     = regex_replace(timestamp(), "[- TZ:]", "")
+  timestamp     = formatdate("YYYYMMDDhhmmss", timestamp())
   image_id      = try(var.git_commit_id, local.timestamp)
-  img_name      = "${local.os_type}-${local.os_version}-${local.node_type}-${local.image_id}.qcow2"
+  img_name      = "${local.os_type}-${local.os_version}-shangtang-${local.node_type}-${local.image_id}.qcow2"
 }
 
 source "qemu" "base" {
@@ -21,15 +21,15 @@ source "qemu" "base" {
   ]
   boot_wait              = "1s"
   cpus                   = 8
-  disk_size              = "51200"
+  disk_size              = "10G"
   display                = "none"
   format                 = "qcow2"
   headless               = true
   http_directory         = "http"
   http_port_max          = "9000"
   http_port_min          = "8080"
-  iso_checksum           = "${local.iso_checksum}"
   iso_url                = "${local.iso_url}"
+  iso_checksum           = "${local.iso_checksum}"
   memory                 = 8096
   net_device             = "virtio-net"
   output_directory       = "output/"
@@ -41,7 +41,6 @@ source "qemu" "base" {
   ssh_read_write_timeout = "20m"
   ssh_timeout            = "20m"
   vm_name                = "${local.img_name}"
-  disk_image             = true
   vnc_bind_address       = "0.0.0.0"
   vnc_port_max           = "5980"
   vnc_port_min           = "5974"
@@ -57,49 +56,60 @@ build {
   }
 
   provisioner "file" {
+    destination = "/usr/local/"
+    source      = "http/soft/i40e-2.1.29u.tar.gz"
+  }
+
+  provisioner "file" {
+    destination = "/root/"
+    source      = "http/soft/x722.txz"
+  }
+  provisioner "file" {
     destination = "/etc/"
     source      = "http/pip.conf"
   }
 
-   provisioner "shell" {
-     scripts = [
-       "scripts/pre-install.d/00-repo.bash",
-       "scripts/pre-install.d/10-cloud-init-el6.bash",
-     ]
-     expect_disconnect = true
-   }
+  provisioner "shell" {
+    scripts = [
+      "scripts/pre-install.d/00-repo.bash",
+      "scripts/pre-install.d/10-cloud-init.bash",
+    ]
+    expect_disconnect = true
+  }
 
-   provisioner "file" {
-     destination = "/etc/cloud/cloud.cfg"
-     source      = "http/cloud.cfg"
-   }
-//   provisioner "ansible" {
-//     inventory_directory = "inventory/"
-//     playbook_file       = "playbooks/compute.yml"
-//     extra_arguments = [
-//       "-e compute_module=paas_mongo_6_5",
-//       "-vvv"
-//     ]
-//   }
+  provisioner "file" {
+    destination = "/etc/cloud/"
+    sources     = [
+        "http/cloud.cfg",
+        "http/ds-identify.cfg"
+    ]
+  }
 
-   provisioner "shell" {
-     scripts = [
-       "scripts/install.d/20-kernel-update-el6.bash",
-       "scripts/install.d/10-ssh-config.bash",
-       "scripts/install.d/20-base-packages.bash",
-       "scripts/install.d/90-raid-drive-megaraid_sas.bash",
-       "scripts/install.d/90-raid-drive-mpt3sas.bash",
-     ]
-     expect_disconnect = true
-   }
+  provisioner "shell" {
+    scripts = [
+      "scripts/install.d/10-ssh-config.bash",
+      "scripts/install.d/20-base-packages.bash",
+    ]
+    expect_disconnect = true
+    pause_before      = "10s"
+  }
 
+  provisioner "shell" {
+    scripts = [
+      "scripts/install.d/90-raid-drive-megaraid_sas.bash",
+      "scripts/install.d/90-raid-drive-mpt3sas.bash",
+      "scripts/install.d/90-network-drive-x722.bash",
+      #"scripts/install.d/90-network-drive-i40e.bash",
+    ]
+    expect_disconnect = true
+  }
 
-   provisioner "shell" {
-     scripts = [
-       "scripts/post-install.d/100-cleanup.bash"
-     ]
-     expect_disconnect = true
-   }
+  provisioner "shell" {
+    scripts = [
+      "scripts/post-install.d/100-cleanup.bash"
+    ]
+    expect_disconnect = true
+  }
 
   post-processor "checksum" {
     checksum_types = ["md5"]
