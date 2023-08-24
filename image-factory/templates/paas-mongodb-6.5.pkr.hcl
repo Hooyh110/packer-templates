@@ -72,8 +72,8 @@ build {
   provisioner "shell" {
     scripts = [
       "scripts/pre-install.d/00-repo.bash",
-      "scripts/install.d/20-kernel-update-el6.bash",
       "scripts/pre-install.d/10-cloud-init.bash",
+      "scripts/install.d/20-kernel-update-el6.bash",
     ]
     expect_disconnect = true
   }

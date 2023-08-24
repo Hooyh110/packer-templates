@@ -57,7 +57,7 @@ source "qemu" "centos-stream-8" {
     ]
   ]
   shutdown_command = "/sbin/halt -h -p"
-  ssh_password     = "osuadmin"
+  ssh_password     = "Kingsoft123"
   ssh_port         = 22
   ssh_username     = "root"
   ssh_wait_timeout = "10000s"
@@ -72,11 +72,11 @@ build {
     "source.qemu.centos-stream-8"
   ]
 
-  provisioner "shell-local" {
-    scripts = [
-      "scripts/common/berks-vendor.sh"
-    ]
-  }
+//  provisioner "shell-local" {
+//    scripts = [
+//      "scripts/common/berks-vendor.sh"
+//    ]
+//  }
 
   provisioner "shell" {
     execute_command = "{{ .Vars }} sudo -S -E bash '{{ .Path }}'"
@@ -84,7 +84,13 @@ build {
       "scripts/common/install-cinc.sh"
     ]
   }
-
+  provisioner "shell" {
+    scripts = [
+      "scripts/common/10-ssh-config.sh",
+      "scripts/common/20-base-packages.sh",
+    ]
+    expect_disconnect = true
+  }
 //  provisioner "file" {
 //    source = "cookbooks"
 //    destination = "/tmp/cinc/"
@@ -104,7 +110,10 @@ build {
 //    source = "chef/runlist/openstack.json"
 //    destination = "/tmp/cinc/dna.json"
 //  }
-
+  provisioner "file" {
+    destination = "/etc/cloud/cloud.cfg"
+    source      = "http/cloud.cfg"
+  }
   provisioner "shell" {
     execute_command = "{{ .Vars }} sudo -S -E bash '{{ .Path }}'"
     environment_vars = [
