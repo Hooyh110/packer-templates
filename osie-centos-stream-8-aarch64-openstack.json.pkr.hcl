@@ -23,7 +23,7 @@ source "qemu" "centos-stream-8" {
     "boot<enter><wait>"]
   boot_wait        = "10s"
   disk_interface   = "virtio-scsi"
-  disk_size        = 4096
+  disk_size        = "80G"
   format           = "qcow2"
   headless         = true
   http_directory   = "http"
@@ -63,7 +63,7 @@ source "qemu" "centos-stream-8" {
   ssh_wait_timeout = "10000s"
   vnc_bind_address = "0.0.0.0"
   vnc_port_min     = 5980
-  vnc_port_max     = 5980
+  vnc_port_max     = 5999
   vm_name          = "centos-stream-8"
 }
 
