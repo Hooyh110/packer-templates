@@ -31,7 +31,7 @@ packages=(
     elfutils-libelf-devel
 )
 
-yum install ${packages[*]} -y
+yum install ${packages[*]} -y --skip-broken
 
 centos_version=$(grep -o '[0-9\.]*' /etc/centos-release | awk -F \. '{print $1}')
 case $centos_version in
