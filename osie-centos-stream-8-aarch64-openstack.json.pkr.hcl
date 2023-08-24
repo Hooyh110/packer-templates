@@ -77,16 +77,22 @@ build {
 //      "scripts/common/berks-vendor.sh"
 //    ]
 //  }
+  provisioner "shell" {
+    scripts = [
+      "scripts/common/repo-init.sh",
+    ]
+    expect_disconnect = true
+  }
   provisioner "file" {
     destination = "/etc/yum.repos.d/galaxy.repo"
     source      = "http/Centos-vault-8.5.2111.repo"
   }
-  provisioner "shell" {
-    execute_command = "{{ .Vars }} sudo -S -E bash '{{ .Path }}'"
-    scripts         = [
-      "scripts/common/install-cinc.sh"
-    ]
-  }
+//  provisioner "shell" {
+//    execute_command = "{{ .Vars }} sudo -S -E bash '{{ .Path }}'"
+//    scripts         = [
+//      "scripts/common/install-cinc.sh"
+//    ]
+//  }
   provisioner "shell" {
     scripts = [
       "scripts/common/10-ssh-config.sh",

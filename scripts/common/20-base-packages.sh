@@ -26,10 +26,8 @@ packages=(
     util-linux-ng
     smartmontools
     bash-completion
-    lldp
-    kernel-devel-$(uname -r)
-    libelf-dev
-    libelf-devel
+    lldpd
+    elfutils-libelf
     elfutils-libelf-devel
 )
 
