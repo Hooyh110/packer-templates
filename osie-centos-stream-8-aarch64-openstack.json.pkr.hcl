@@ -64,7 +64,7 @@ source "qemu" "centos-stream-8" {
   vnc_bind_address = "0.0.0.0"
   vnc_port_min     = 5980
   vnc_port_max     = 5999
-  vm_name          = "centos-stream-8"
+  vm_name          = "centos-stream-8-aarch64"
 }
 
 build {
@@ -129,8 +129,8 @@ build {
       "OSUADMIN_PASSWD=${var.osuadmin_passwd}"
     ]
     scripts         = [
-      "scripts/common/converge-cinc.sh",
-      "scripts/common/remove-cinc.sh",
+//      "scripts/common/converge-cinc.sh",
+//      "scripts/common/remove-cinc.sh",
       "scripts/common/minimize.sh"
     ]
   }
