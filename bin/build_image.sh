@@ -28,7 +28,7 @@ done
 [ -z "$TEMPLATE" ] && echo "Error: Template file not set" && exit 1
 
 
-if [[ $TEMPLATE_NAME == *"hcl"* ]]; then
+if [[ $TEMPLATE == *"pkr.hcl"* ]]; then
   DIR_NAME="$(basename -s .json.pkr.hcl "$TEMPLATE")"
   TEMPLATE_NAME="$(basename -s .json.pkr.hcl "$TEMPLATE")"
   IMAGE_NAME=$(grep vm_name "$TEMPLATE" | awk '{print $3}' | sed -e 's/\"//g' | sed -e 's/,//g')
