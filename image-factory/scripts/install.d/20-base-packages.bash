@@ -35,6 +35,7 @@ packages=(
     libelf-dev
     libelf-devel
     elfutils-libelf-devel
+    bridge-utils
 )
 
 yum install ${packages[*]} -y
