@@ -123,15 +123,15 @@ build {
     destination = "/etc/cloud/cloud.cfg"
     source      = "http/cloud.cfg"
   }
-  provisioner "shell" {
-    execute_command = "{{ .Vars }} sudo -S -E bash '{{ .Path }}'"
-    environment_vars = [
-      "OSUADMIN_PASSWD=${var.osuadmin_passwd}"
-    ]
-    scripts         = [
-//      "scripts/common/converge-cinc.sh",
-//      "scripts/common/remove-cinc.sh",
-      "scripts/common/minimize.sh"
-    ]
-  }
+//  provisioner "shell" {
+//    execute_command = "{{ .Vars }} sudo -S -E bash '{{ .Path }}'"
+//    environment_vars = [
+//      "OSUADMIN_PASSWD=${var.osuadmin_passwd}"
+//    ]
+//    scripts         = [
+////      "scripts/common/converge-cinc.sh",
+////      "scripts/common/remove-cinc.sh",
+//      "scripts/common/minimize.sh"
+//    ]
+//  }
 }
