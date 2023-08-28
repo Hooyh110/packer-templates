@@ -29,9 +29,14 @@ done
 
 DIR_NAME="$(basename -s .json "$TEMPLATE")"
 TEMPLATE_NAME="$(basename -s .json "$TEMPLATE")"
-IMAGE_NAME=$(grep vm_name "$TEMPLATE" | awk '{print $2}' | sed -e 's/\"//g' | sed -e 's/,//g')
+if [[ $TEMPLATE_NAME == *"hcl"* ]]; then
+  IMAGE_NAME=$(grep vm_name "$TEMPLATE" | awk '{print $3}' | sed -e 's/\"//g' | sed -e 's/,//g')
+else
+  IMAGE_NAME=$(grep vm_name "$TEMPLATE" | awk '{print $2}' | sed -e 's/\"//g' | sed -e 's/,//g')
+fi
 FINAL_QCOW_FILE_NAME="${DIR_NAME}/${IMAGE_NAME}-compressed.qcow2"
 FINAL_RAW_FILE_NAME="${DIR_NAME}/${IMAGE_NAME}-converted.raw"
+
 
 if [ -f "$FINAL_QCOW_FILE_NAME" ]; then
   echo
