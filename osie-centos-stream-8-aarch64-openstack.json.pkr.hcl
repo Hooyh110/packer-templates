@@ -65,6 +65,7 @@ source "qemu" "centos-stream-8" {
   vnc_port_min     = 5980
   vnc_port_max     = 5999
   vm_name          = "centos-stream-8-aarch64"
+  output_directory = "osie-centos-stream-8-aarch64-openstack/"
 }
 
 build {
