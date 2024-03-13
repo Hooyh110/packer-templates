@@ -31,11 +31,11 @@ packages=(
     smartmontools
     bash-completion
     lldp
-    cloud-init
     kernel-devel-$(uname -r)
     libelf-dev
     libelf-devel
     elfutils-libelf-devel
+    bridge-utils
 )
 
 yum install ${packages[*]} -y

@@ -17,12 +17,12 @@ packages=(
     python-markupsafe
     python-jsonschema
     python-six
-    python-argparse
-    cloud-init
+    python-argpars
     cloud-utils-growpart
     dracut-modules-growroot
 )
    # cloud-init-18.5
 
 yum install ${packages[*]} -y
+yum install -y cloud-init
 dracut -f
