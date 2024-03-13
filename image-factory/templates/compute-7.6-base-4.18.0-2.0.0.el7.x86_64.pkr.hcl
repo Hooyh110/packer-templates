@@ -71,20 +71,20 @@ build {
     destination = "/etc/"
     source      = "http/pip.conf"
   }
-#  provisioner "ansible" {
-#    inventory_directory = "inventory/"
-#    playbook_file       = "playbooks/compute.yml"
-#    extra_arguments = [
-#    "-e compute_module=3.0.2",
-#      "-vvv"
-#    ]
-#  }
+  provisioner "ansible" {
+    inventory_directory = "inventory/"
+    playbook_file       = "playbooks/compute.yml"
+    extra_arguments = [
+    "-e compute_module=3.0.2",
+      "-vvv"
+    ]
+  }
 
   provisioner "shell" {
     scripts = [
       "scripts/pre-install.d/00-repo.bash",
       "scripts/pre-install.d/10-cloud-init.bash",
-      "scripts/install.d/60-update-kernel-5.4.116.bash",
+#      "scripts/install.d/60-update-kernel-5.4.116.bash",
     ]
     expect_disconnect = true
   }
@@ -109,9 +109,9 @@ build {
 
   provisioner "shell" {
     scripts = [
-      "scripts/install.d/90-raid-drive-megaraid_sas_7.6-5.4.116.bash",
-      #"scripts/install.d/90-network-drive-i40e-3.0.2-7.6.bash",
-      #"scripts/install.d/90-network-drive-x722-3.0.2-7.6.bash",
+      "scripts/install.d/90-raid-drive-megaraid_sas_7.6-4.18.bash",
+      "scripts/install.d/90-network-drive-i40e-3.0.2-7.6.bash",
+      "scripts/install.d/90-network-drive-x722-3.0.2-7.6.bash",
     ]
     expect_disconnect = true
   }

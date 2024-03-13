@@ -23,6 +23,9 @@ compute_software:
     kvm_kernel_version: "4.18.0-193.2.0.0.el7.ksyun"
     #mlnx_ofa_version: "5.0-OFED.5.0.2.1.8.1.g5f67178.kver.4.18.0_193.2.0.0.el7.ksyun"
     mlnx_ofa_version: "5.4-OFED.5.4.3.0.3.1.kver.4.18.0_193.2.0.0.el7.ksyun"
+  s6k1-101:
+    kvm_kernel_version: "4.18.0-193.1.0.1.el7.ksyun"
+    mlnx_ofa_version: "5.0-OFED.5.0.2.1.8.1.g5f67178.kver.4.18.0_193.1.0.1.el7.ksyun"
   icelake:
     #kvm_kernel_version: "4.18.0-193.3.0.0.el7.cloud"
     #mlnx_ofa_version: "5.2-OFED.5.2.1.0.4.1.kver.4.18.0_193.3.0.0.el7.cloud"
