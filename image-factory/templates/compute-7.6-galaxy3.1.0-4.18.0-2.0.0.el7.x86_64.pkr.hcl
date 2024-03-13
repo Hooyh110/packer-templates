@@ -6,13 +6,10 @@ locals {
   anwserfile    = "anwserfiles/ks_centos_7.cfg"
   iso_checksum  = "file:http://10.91.128.61/images/iso/sha1sum.txt"
   iso_url       = "http://10.91.128.61/images/iso/CentOS-7-x86_64-Everything-1810.iso"
-
-  #iso_checksum  = "file:http://10.91.128.61/images/baremetal/base/md5sum.txt"
-  #iso_url       = "http://10.91.128.61/images/baremetal/base/CentOS-7.6-base-shangtang.qcow2"
   os_version    = 7.6
   timestamp     = formatdate("YYYYMMDDhhmmss", timestamp())
   image_id      = try(var.git_commit_id, local.timestamp)
-  img_name      = "${local.os_type}-${local.os_version}-source-3.0.2-5.4.116.el7-latest.qcow2"
+  img_name      = "${local.os_type}-${local.os_version}-galaxy3.1.0-4.18.0-193.2.0.0.el7-latest.qcow2"
 }
 
 source "qemu" "base" {
@@ -75,7 +72,7 @@ build {
     inventory_directory = "inventory/"
     playbook_file       = "playbooks/compute.yml"
     extra_arguments = [
-    "-e compute_module=3.0.2",
+    "-e compute_module=3.1.0-4.18",
       "-vvv"
     ]
   }

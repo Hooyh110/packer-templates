@@ -71,3 +71,5 @@ da64078abaeb2f089cb6e1aba9eec501	CentOS-7.6-base-3.0.2-3.10.957.el7-latest.qcow2
 93e94bdf1bf8b2881d6d95f9e8fa524e	CentOS-7.6-source-3.0.2-5.4.116.el7-latest.qcow2
 f149dd091d19864a4817ede7d5359a16	CentOS-7.6-base-3.0.2-3.10.957.el7-latest.qcow2
 aae182fca11749f1d8ded0412a71e6ca	CentOS-7.3-paas-3.0.2-4.18.0-193.2.0.0.el7.x86_64.qcow2
+c6fd458f01525a2fd790095e482753fe	CentOS-7.6-source-3.0.2-5.4.116.el7-latest.qcow2
+4c8acb73a4a1f23a5e99436c79f74b48	CentOS-7.6-galaxy3.1.0-4.18.0-193.2.0.0.el7-latest.qcow2
