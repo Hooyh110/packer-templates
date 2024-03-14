@@ -6,6 +6,7 @@
 
 set -eux
 set -o pipefail
+dracut -f
 
 # 清理用户登录记录
 echo > /var/log/wtmp
