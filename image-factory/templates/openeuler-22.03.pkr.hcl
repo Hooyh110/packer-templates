@@ -52,10 +52,10 @@ build {
   name    = "base"
   sources = ["source.qemu.base"]
 
-  {% comment %} provisioner "file" {
-    destination = "/etc/yum.repos.d/galaxy.repo"
-    source      = "http/galaxy.repo"
-  } {% endcomment %}
+#  provisioner "file" {
+#    destination = "/etc/yum.repos.d/galaxy.repo"
+#    source      = "http/galaxy.repo"
+#  }
   provisioner "file" {
     destination = "/opt/"
     source      = "http/update-kernel.sh"
