@@ -4,7 +4,7 @@ locals {
   user_name     = "root"
   user_password = "Kingsoft123"
   anwserfile    = "anwserfiles/openeuler-ks.cfg"
-  iso_checksum  = "file:http://luna.galaxy.ksyun.com/openeuler/openEuler-22.03-LTS/ISO/sha1sum.txt"
+  iso_checksum  = "file:http://luna.galaxy.ksyun.com/images/iso/sha1sum.txt"
   iso_url       = "http://luna.galaxy.ksyun.com/openeuler/openEuler-22.03-LTS/ISO/x86_64/openEuler-22.03-LTS-x86_64-dvd.iso"
 
   os_version    = 22.03
