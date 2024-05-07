@@ -52,10 +52,10 @@ build {
   name    = "base"
   sources = ["source.qemu.base"]
 
-#  provisioner "file" {
-#    destination = "/etc/yum.repos.d/galaxy.repo"
-#    source      = "http/galaxy.repo"
-#  }
+  provisioner "file" {
+    destination = "/etc/yum.repos.d/openEuler.repo"
+    source      = "http/openEuler.repo"
+  }
 
   provisioner "file" {
     destination = "/root/"
@@ -72,7 +72,7 @@ build {
 
   provisioner "shell" {
     scripts = [
-      #"scripts/pre-install.d/00-repo.bash",
+      "scripts/pre-install.d/00-repo-openeuler.bash",
       "scripts/pre-install.d/10-cloud-init.bash",
       #"scripts/install.d/60-update-kernel-5.4.116.bash",
     ]
