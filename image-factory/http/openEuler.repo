@@ -1,9 +1,9 @@
-[0S]
-name-0S
+[OS]
+name=OS
 baseurl=http://luna.galaxy.ksyun.com/openeuler/openEuler-22.83-LTS/OS/$bascarch/
 enabled=1
 gpgcheck=1
-gpgkey=http://luna.galaxy.ksyun.com/openeuler/openEuler-22.03-LTS/0S/$basearch/RPM-GPG-KEY-openEuler
+gpgkey=http://luna.galaxy.ksyun.com/openeuler/openEuler-22.03-LTS/OS/$basearch/RPM-GPG-KEY-openEuler
 [everuthing]
 name=everuthing
 baseurl=http://luna.galaxy.ksyun.com/openeuler/openEuler-22.03-LTS/everuthing/$basearch/
