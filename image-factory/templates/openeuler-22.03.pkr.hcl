@@ -92,7 +92,7 @@ build {
     scripts = [
       "scripts/install.d/10-ssh-config.bash",
       "scripts/install.d/20-openeule-driver.bash",
-      "scripts/install.d/20-base-packages.bash",
+      "scripts/install.d/20-base-packages-openeuler.bash",
     ]
     expect_disconnect = true
     pause_before      = "10s"
