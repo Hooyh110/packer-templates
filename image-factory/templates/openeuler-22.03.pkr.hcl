@@ -73,7 +73,7 @@ build {
   provisioner "shell" {
     scripts = [
       "scripts/pre-install.d/00-repo-openeuler.bash",
-      "scripts/pre-install.d/10-cloud-init.bash",
+      "scripts/pre-install.d/10-cloud-init-openeuler.bash",
       #"scripts/install.d/60-update-kernel-5.4.116.bash",
     ]
     expect_disconnect = true
