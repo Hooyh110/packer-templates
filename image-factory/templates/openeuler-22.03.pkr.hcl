@@ -56,18 +56,10 @@ build {
 #    destination = "/etc/yum.repos.d/galaxy.repo"
 #    source      = "http/galaxy.repo"
 #  }
-  provisioner "file" {
-    destination = "/opt/"
-    source      = "http/update-kernel.sh"
-  }
-  provisioner "file" {
-    destination = "/opt/"
-    source      = "http/90-network-drive-i40e-3.0.2-7.6.sh"
-  }
 
   provisioner "file" {
-    destination = "/etc/"
-    source      = "http/pip.conf"
+    destination = "/root/"
+    source      = "http/soft/driver.tar.gz"
   }
 #  provisioner "ansible" {
 #    inventory_directory = "inventory/"
@@ -80,9 +72,9 @@ build {
 
   provisioner "shell" {
     scripts = [
-      "scripts/pre-install.d/00-repo.bash",
+      #"scripts/pre-install.d/00-repo.bash",
       "scripts/pre-install.d/10-cloud-init.bash",
-      "scripts/install.d/60-update-kernel-5.4.116.bash",
+      #"scripts/install.d/60-update-kernel-5.4.116.bash",
     ]
     expect_disconnect = true
   }
@@ -99,20 +91,13 @@ build {
   provisioner "shell" {
     scripts = [
       "scripts/install.d/10-ssh-config.bash",
+      "scripts/install.d/20-openeule-driver.bash",
       "scripts/install.d/20-base-packages.bash",
     ]
     expect_disconnect = true
     pause_before      = "10s"
   }
 
-  provisioner "shell" {
-    scripts = [
-      "scripts/install.d/90-raid-drive-megaraid_sas_7.6-5.4.116.bash",
-      #"scripts/install.d/90-network-drive-i40e-3.0.2-7.6.bash",
-      #"scripts/install.d/90-network-drive-x722-3.0.2-7.6.bash",
-    ]
-    expect_disconnect = true
-  }
 
   provisioner "shell" {
     scripts = [
