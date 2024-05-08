@@ -23,7 +23,7 @@ source "qemu" "base" {
 
   boot_wait              = "1s"
   cpus                   = 8
-  disk_size              = "50G"
+  disk_size              = "300G"
   display                = "none"
   format                 = "qcow2"
   headless               = true

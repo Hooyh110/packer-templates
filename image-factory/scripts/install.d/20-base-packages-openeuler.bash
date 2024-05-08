@@ -35,3 +35,4 @@ packages=(
 )
 
 yum install ${packages[*]} -y
+yum remove dnsmasq  virt -y
