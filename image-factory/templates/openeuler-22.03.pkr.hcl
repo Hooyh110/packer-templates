@@ -98,14 +98,6 @@ build {
     pause_before      = "10s"
   }
 
-
-  provisioner "shell" {
-    scripts = [
-      "scripts/post-install.d/100-cleanup.bash"
-    ]
-    expect_disconnect = true
-  }
-
   post-processor "checksum" {
     checksum_types = ["md5"]
     output         = "${local.node_type}.{{.ChecksumType}}sum.txt"
