@@ -7,7 +7,7 @@ locals {
   iso_checksum  = "file:http://luna.galaxy.ksyun.com/images/iso/sha1sum.txt"
   iso_url       = "http://luna.galaxy.ksyun.com/images/iso/galaxy-22.03-LTS-SP3-x86_64-dvd.iso"
 
-  os_version    = 22.03-sp3
+  os_version    = "22.03-sp3"
   timestamp     = formatdate("YYYYMMDDhhmmss", timestamp())
   image_id      = try(var.git_commit_id, local.timestamp)
   img_name      = "${local.os_type}-${local.os_version}-source-3.0.2-el7-latest.qcow2"
