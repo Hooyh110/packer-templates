@@ -5,7 +5,7 @@ locals {
   user_password = "Kingsoft123"
   anwserfile    = "anwserfiles/openeuler-ks.cfg"
   iso_checksum  = "file:http://luna.galaxy.ksyun.com/images/iso/sha1sum.txt"
-  iso_url       = "http://luna.galaxy.ksyun.com/images/iso/galaxy-22.03-LTS-SP3-x86_64-dvd.iso"
+  iso_url       = "http://luna.galaxy.ksyun.com/openeuler/openEuler-22.03-LTS-SP3/ISO/x86_64/openEuler-22.03-LTS-SP3-x86_64-dvd.iso"
 
   os_version    = "22.03-sp3"
   timestamp     = formatdate("YYYYMMDDhhmmss", timestamp())
