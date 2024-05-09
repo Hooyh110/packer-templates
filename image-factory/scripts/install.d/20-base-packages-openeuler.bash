@@ -30,7 +30,6 @@ packages=(
     smartmontools
     bash-completion
     kernel-devel
-    elfutils-libelf-devel
     bridge-utils
 )
 
