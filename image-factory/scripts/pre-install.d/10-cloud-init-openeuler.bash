@@ -23,4 +23,5 @@ packages=(
    # cloud-init-18.5
 
 yum install ${packages[*]} -y
+yum install tar -y
 dracut -f

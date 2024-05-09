@@ -8,4 +8,3 @@ set -o pipefail
 
 yum clean all
 yum list
-yum install tar -y
