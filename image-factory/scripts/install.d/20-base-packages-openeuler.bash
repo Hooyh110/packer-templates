@@ -12,7 +12,6 @@ packages=(
     tar
     vim
     zip
-    zlib
     wget
     tree
     unzip
