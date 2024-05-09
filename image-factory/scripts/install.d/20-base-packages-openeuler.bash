@@ -29,7 +29,7 @@ packages=(
     util-linux-ng
     smartmontools
     bash-completion
-    kernel-devel-$(uname -r)
+    kernel-devel
     elfutils-libelf-devel
     bridge-utils
 )
