@@ -9,7 +9,7 @@ locals {
   os_version    = 7.6
   timestamp     = formatdate("YYYYMMDDhhmmss", timestamp())
   image_id      = try(var.git_commit_id, local.timestamp)
-  img_name      = "${local.os_type}-${local.os_version}-galaxy3.1.0-4.18.0-193.2.0.0.el7-latest.qcow2"
+  img_name      = "${local.os_type}-${local.os_version}-galaxy3.1.0-4.18.0-80.11.3.0.el7-latest.qcow2"
 }
 
 source "qemu" "base" {
@@ -55,10 +55,7 @@ build {
     destination = "/etc/yum.repos.d/galaxy.repo"
     source      = "http/galaxy.repo"
   }
-  provisioner "file" {
-    destination = "/opt/"
-    source      = "http/update-kernel.sh"
-  }
+
   provisioner "file" {
     destination = "/opt/"
     source      = "http/90-network-drive-i40e-3.0.2-7.6.sh"
@@ -68,20 +65,12 @@ build {
     destination = "/etc/"
     source      = "http/pip.conf"
   }
-  provisioner "ansible" {
-    inventory_directory = "inventory/"
-    playbook_file       = "playbooks/compute.yml"
-    extra_arguments = [
-    "-e compute_module=3.1.0-4.18-80",
-      "-vvv"
-    ]
-  }
 
   provisioner "shell" {
     scripts = [
       "scripts/pre-install.d/00-repo.bash",
       "scripts/pre-install.d/10-cloud-init.bash",
-#      "scripts/install.d/60-update-kernel-5.4.116.bash",
+      "scripts/install.d/60-update-kernel-4.18.0-80.bash",
     ]
     expect_disconnect = true
   }
