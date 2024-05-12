@@ -100,7 +100,7 @@ build {
       "scripts/install.d/90-network-drive-x722-3.0.2-7.6.bash",
 #      "scripts/install.d/90-raid-drive-mpt3sas-3.0.2.bash",
       "scripts/install.d/90-raid-drive-megaraid_sas_7.6-5.4.116.bash",
-      "scripts/install.d/90-raid-drive-mpt3sas-icelake.bash",
+#      "scripts/install.d/90-raid-drive-mpt3sas-icelake.bash",
     ]
     expect_disconnect = true
   }
