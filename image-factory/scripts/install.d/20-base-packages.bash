@@ -36,6 +36,7 @@ packages=(
     libelf-devel
     elfutils-libelf-devel
     bridge-utils
+    ksc-rootfs-autoresize
 )
 
 yum install ${packages[*]} -y

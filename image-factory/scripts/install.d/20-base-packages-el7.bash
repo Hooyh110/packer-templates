@@ -1,7 +1,7 @@
 #!/bin/bash
 ###
-# @Author: xuanyu
-# @Date: 2021-08-31 19:46:56
+# @Author: huyuhao
+# @Date: 2024-05-31 19:46:56
 ###
 
 set -eux
@@ -29,6 +29,7 @@ packages=(
     util-linux-ng
     smartmontools
     bash-completion
+    ksc-rootfs-autoresize
 )
 
 yum install ${packages[*]} -y
