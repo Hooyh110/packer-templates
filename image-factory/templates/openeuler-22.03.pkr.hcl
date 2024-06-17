@@ -61,6 +61,10 @@ build {
     destination = "/root/"
     source      = "http/soft/driver.tar.gz"
   }
+  provisioner "file" {
+    destination = "/usr/bin/"
+    source      = "http/soft/ksc-rootfs-autoresize"
+  }
 #  provisioner "ansible" {
 #    inventory_directory = "inventory/"
 #    playbook_file       = "playbooks/compute.yml"

@@ -29,7 +29,6 @@ packages=(
     util-linux-ng
     smartmontools
     bash-completion
-    ksc-rootfs-autoresize
 )
 
 yum install ${packages[*]} -y

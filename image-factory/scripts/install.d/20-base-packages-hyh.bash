@@ -34,7 +34,6 @@ packages=(
     cloud-init
     kernel-devel-$(uname -r)
     kernel-headers-$(uname -r)
-    ksc-rootfs-autoresize
 )
 
 yum install ${packages[*]} -y

@@ -30,7 +30,6 @@ packages=(
     bash-completion
     kernel-devel
     bridge-utils
-    ksc-rootfs-autoresize
 )
 
 yum install ${packages[*]} -y
