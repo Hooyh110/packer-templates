@@ -2,7 +2,7 @@ packer {
   required_plugins {
     qemu = {
         #source = "github.com/hashicorp/qemu" #官方版本
-        source = "github.com/packer-community/qemu" # 社区版本
+        source = "github.com/packer-io/qemu" # 社区版本
         version = ">= 1.0.0"
     }
   }
