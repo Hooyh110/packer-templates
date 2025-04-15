@@ -1,6 +1,6 @@
 packer = {
     required_plugins = {
-        amazon = {
+        qemu = {
             source = "github.com/hashicorp/qemu"
             version = ">= 1.0.0"
         }
