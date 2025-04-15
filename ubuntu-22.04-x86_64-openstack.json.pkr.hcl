@@ -1,9 +1,8 @@
 packer {
   required_plugins {
     qemu = {
-        #source = "github.com/hashicorp/qemu" #官方版本
-        source = "github.com/softmoth/packer-plugin-qemu" # 社区版本
-        version = ">= 1.0.0"
+      version = ">= 1.1.1"
+      source  = "github.com/hashicorp/qemu"
     }
   }
 }
