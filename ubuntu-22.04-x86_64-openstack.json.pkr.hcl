@@ -80,10 +80,10 @@ build {
     ]
   }
 
-  provisioner "file" {
-    source = "cookbooks"
-    destination = "/tmp/cinc/"
-  }
+#  provisioner "file" {
+#    source = "cookbooks"
+#    destination = "/tmp/cinc/"
+#  }
 
 #  provisioner "file" {
 #    source = "inspec"
