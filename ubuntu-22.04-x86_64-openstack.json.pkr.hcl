@@ -1,11 +1,11 @@
-packer {
-  required_plugins {
-    qemu = {
-      version = ">= 1.1.1"
-      source  = "github.com/hashicorp/qemu"
-    }
-  }
-}
+#packer {
+#  required_plugins {
+#    qemu = {
+#      version = ">= 1.1.1"
+#      source  = "github.com/hashicorp/qemu"
+#    }
+#  }
+#}
 variable "mirror" {
   type    = string
   default = "https://ubuntu.osuosl.org/releases/22.04"
