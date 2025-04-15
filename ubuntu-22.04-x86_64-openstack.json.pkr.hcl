@@ -85,10 +85,10 @@ build {
     destination = "/tmp/cinc/"
   }
 
-  provisioner "file" {
-    source = "inspec"
-    destination = "/tmp/cinc/"
-  }
+#  provisioner "file" {
+#    source = "inspec"
+#    destination = "/tmp/cinc/"
+#  }
 
   provisioner "file" {
     source = "chef/client.rb"
