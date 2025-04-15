@@ -1,3 +1,11 @@
+packer = {
+    required_plugins = {
+        amazon = {
+            source = "github.com/hashicorp/qemu"
+            version = ">= 1.0.0"
+        }
+    }
+}
 variable "mirror" {
   type    = string
   default = "https://ubuntu.osuosl.org/releases/22.04"
