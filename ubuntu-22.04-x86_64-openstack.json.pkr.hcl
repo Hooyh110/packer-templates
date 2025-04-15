@@ -39,7 +39,7 @@ source "qemu" "ubuntu-2204" {
   headless         = true
   http_directory   = "http"
   iso_checksum     = "file:https://ubuntu.osuosl.org/releases/22.04/SHA256SUMS"
-  iso_url          = "${variable.mirror}/ubuntu-22.04.1-live-server-amd64.iso"
+  iso_url          = "${var.mirror}/ubuntu-22.04.1-live-server-amd64.iso"
   qemu_binary      = "qemu-kvm"
   qemuargs         = [
     [
