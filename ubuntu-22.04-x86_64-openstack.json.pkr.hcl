@@ -33,7 +33,7 @@ source "qemu" "ubuntu-2204" {
       "boot<enter><wait>"
     ]
   boot_wait        = "5s"
-  disk_interface   = "virtio-scsi"
+  disk_interface   = "virtio"
   disk_size        = 40960
   format           = "qcow2"
   headless         = true
