@@ -56,9 +56,9 @@ if [ -e "chef/${TEMPLATE_NAME}/Berksfile" ]; then
   berks vendor --delete -b "chef/${TEMPLATE_NAME}/Berksfile" "chef/${TEMPLATE_NAME}/cookbooks"
 fi
 
-#export PACKER_LOG=1
+export PACKER_LOG=1
 #packer build -on-error=abort -color=false -force "$(basename "$TEMPLATE")"
-packer build -on-error=abort -force "$(basename "$TEMPLATE")"
+packer  build -on-error=abort -force "$(basename "$TEMPLATE")"
 #packer build --debug "$(basename "$TEMPLATE")"
 
 qemu-img convert -O qcow2 -c "${DIR_NAME}/${IMAGE_NAME}" "$FINAL_QCOW_FILE_NAME"

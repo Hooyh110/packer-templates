@@ -34,8 +34,8 @@ source "qemu" "ubuntu-2204" {
     ]
   boot_wait        = "5s"
   disk_interface   = "virtio-scsi"
-  disk_size        = 4096
-  format           = "raw"
+  disk_size        = 40960
+  format           = "qcow2"
   headless         = true
   http_directory   = "http"
   iso_checksum     = "file:https://ubuntu.osuosl.org/releases/22.04/SHA256SUMS"
@@ -58,7 +58,7 @@ source "qemu" "ubuntu-2204" {
   ssh_wait_timeout = "10000s"
   vnc_bind_address = "0.0.0.0"
   vnc_port_min     = 5901
-  vnc_port_max     = 5901
+  vnc_port_max     = 5910
   vm_name          = "ubuntu-2204"
 }
 
