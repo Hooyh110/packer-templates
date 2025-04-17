@@ -9,8 +9,9 @@ autoinstall:
   keyboard:
     layout: us
     toggle: null
-    variant: intl
+    variant: ""
   locale: en_US.UTF-8
+  timezone: Asia/Shanghai
   network:
     version: 2
     renderer: networkd
@@ -26,32 +27,91 @@ autoinstall:
   #         addresses:
   #           - 8.8.8.8
   #           - 8.8.4.4
+  source:
+    id: ubuntu-22.04
+    search_drivers: false
+  ssh:
+    allow-pw: true
+    authorized-keys: []
+    install-server: true
   storage:
-    layout:
-      name: direct
-    # layout:
-    #   name: lvm
-    #   type: disk
-    #   wipe: superblock-recursive
-    #   ptable: gpt
-    #   preserve: false
-    #   grub_device: true
-    #   wipe_table: true
-    #   # device: 
-    #   #   - /dev/sda
-    #   #   - /dev/vda
-    # config:
-    #   - type: partition
-    #     id: partition-1
-    #     size: 500000000  # 500MB
-    #     filesystem: ext4
-    #     mount: /boot
-    #   - type: partition
-    #     id: partition-2
-    #     size: 0  # 使用剩余空间
-    #     filesystem: ext4
-    #     mount: /
-  
+    config:
+      - ptable: gpt
+        path: /dev/vda
+        wipe: superblock-recursive
+        preserve: false
+        name: ""
+        grub_device: false
+        type: disk
+        id: disk-sda
+      - device: disk-sda
+        size: 1127219200
+        wipe: superblock
+        flag: boot
+        number: 1
+        preserve: false
+        grub_device: true
+        offset: 1048576
+        type: partition
+        id: partition-0
+      - fstype: fat32
+        volume: partition-0
+        preserve: false
+        type: format
+        id: format-0
+      - device: disk-sda
+        size: 2147483648
+        wipe: superblock
+        number: 2
+        preserve: false
+        grub_device: false
+        offset: 1128267776
+        type: partition
+        id: partition-1
+      - fstype: ext4
+        volume: partition-1
+        preserve: false
+        type: format
+        id: format-1
+      - device: disk-sda
+        size: -1 #2395999305728
+        wipe: superblock
+        number: 3
+        preserve: false
+        grub_device: false
+        offset: 3275751424
+        type: partition
+        id: partition-2
+      - name: ubuntu-vg
+        devices:
+          - partition-2
+        preserve: false
+        type: lvm_volgroup
+        id: lvm_volgroup-0
+      - name: ubuntu-lv
+        volgroup: lvm_volgroup-0
+        # size: 2395996160000B
+        wipe: superblock
+        preserve: false
+        type: lvm_partition
+        id: lvm_partition-0
+      - fstype: xfs
+        volume: lvm_partition-0
+        preserve: false
+        type: format
+        id: format-3
+      - path: /
+        device: format-3
+        type: mount
+        id: mount-3
+      - path: /boot
+        device: format-1
+        type: mount
+        id: mount-1
+      - path: /boot/efi
+        device: format-0
+        type: mount
+        id: mount-0
   early-commands:
     # otherwise packer tries to connect and exceed max attempts:
     - systemctl stop ssh
@@ -67,8 +127,8 @@ autoinstall:
     - curtin in-target --target=/target -- passwd -q -x -1 root
     - sed -i 's|^root:.:|root:$6$osuadmin.$QXNHxHGhDBX1KStyKri0uqdkSObBtjUUzj31IPU1TkMl.uUu0HwB365HSm5za6bVhDoSpTvVLqjKOzKjQMCxL/:|' /target/etc/shadow
     - curtin in-target --target=/target -- apt-get -y dist-upgrade
-  ssh:
-    install-server: true
+  # ssh:
+  #   install-server: true
   refresh-installer:
     update: yes
   packages:
