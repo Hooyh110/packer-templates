@@ -27,9 +27,9 @@ autoinstall:
   #         addresses:
   #           - 8.8.8.8
   #           - 8.8.4.4
-  source:
-    id: ubuntu-22.04
-    search_drivers: false
+  # source:
+  #   id: ubuntu-22.04
+  #   search_drivers: false
   ssh:
     allow-pw: true
     authorized-keys: []
@@ -112,10 +112,10 @@ autoinstall:
         device: format-0
         type: mount
         id: mount-0
-  early-commands:
-    # otherwise packer tries to connect and exceed max attempts:
-    - systemctl stop ssh
-    - systemctl restart systemd-timesyncd
+  # early-commands:
+  #   # otherwise packer tries to connect and exceed max attempts:
+  #   - systemctl stop ssh
+  #   - systemctl restart systemd-timesyncd
   late-commands:
     - mkdir -p /etc/apt/keyrings
     - cp /path/to/your/certificate.crt /etc/apt/keyrings/
