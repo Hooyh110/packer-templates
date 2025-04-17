@@ -103,10 +103,11 @@ autoinstall:
   #   - python3-cryptography
   #   - python3-cryptography-vectors  
   apt:
+    preserve_sources: false
     mirror-selection:
       primary:
         - arches: [i386, amd64]
-          uri: "http://mirrors.aliyun.com/ubuntu/"
+          uri: "https://mirrors.aliyun.com/ubuntu/"
         - arches: [default]
-          uri: "http://mirrors.aliyun.com/ubuntu/"
+          uri: "https://mirrors.aliyun.com/ubuntu/"
     geoip: false
