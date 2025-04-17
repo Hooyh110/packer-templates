@@ -33,8 +33,10 @@ source "qemu" "ubuntu-2204" {
       "boot<enter><wait>"
     ]
   boot_wait        = "5s"
-  disk_interface   = "virtio"
-  disk_size        = 40960
+  #disk_interface   = "virtio"
+  cpus             = 8
+  display          = "none"
+  disk_size        = "480G"
   format           = "qcow2"
   headless         = true
   http_directory   = "http"
@@ -44,7 +46,7 @@ source "qemu" "ubuntu-2204" {
   qemuargs         = [
     [
       "-m",
-      "2048M"
+      "8128M"
     ],
     [
       "-boot",
