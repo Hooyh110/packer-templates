@@ -57,6 +57,9 @@ autoinstall:
     - systemctl stop ssh
     - systemctl restart systemd-timesyncd
   late-commands:
+    - mkdir -p /etc/apt/keyrings
+    - cp /path/to/your/certificate.crt /etc/apt/keyrings/
+    - echo "Acquire::https::mirrors.aliyun.com::Verify-Peer \"false\";" > /etc/apt/apt.conf.d/99disable-ssl-verification
     - curtin in-target -- apt-get update
     - curtin in-target -- apt-get -y install qemu-guest-agent
     - echo "PermitRootLogin yes" >> /target/etc/ssh/sshd_config
