@@ -33,6 +33,7 @@ source "qemu" "ubuntu-2204" {
       "boot<enter><wait>"
     ]
   boot_wait        = "5s"
+  accelerator      = "kvm"
   #disk_interface   = "virtio"
   cpus             = 8
   display          = "none"
@@ -42,7 +43,8 @@ source "qemu" "ubuntu-2204" {
   http_directory   = "http"
   iso_checksum     = "file:https://ubuntu.osuosl.org/releases/22.04/SHA256SUMS"
   iso_url          = "${var.mirror}/ubuntu-22.04.5-live-server-amd64.iso"
-  qemu_binary      = "qemu-kvm"
+  #qemu_binary      = "qemu-kvm"
+  qemu_binary      = "/usr/libexec/qemu-kvm"
   qemuargs         = [
     [
       "-m",
