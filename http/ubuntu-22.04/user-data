@@ -23,30 +23,28 @@ autoinstall:
             - 8.8.8.8
             - 8.8.4.4
   storage:
+    layout:
+      name: lvm
+      type: disk
+      wipe: superblock-recursive
+      ptable: gpt
+      preserve: false
+      grub_device: true
+      wipe_table: true
+      device: 
+        - /dev/sda
+        - /dev/vda
     config:
-      - type: disk
-        match:
-          name: vda
-        preserve: false
-        wipe: superblock-recursive
-        ptable: gpt
-        name: primary
-        grub_device: true
-        wipe_table: true
-        part:
-          - size: 512M
-            number: 1
-            flags:
-              - boot
-            type: efi
-          - size: 2G
-            number: 2
-            type: swap
-          - size: 0
-            number: 3
-            type: ext4
-            wipe_filesystem: true
-            growfs_on_boot: true 
+      - type: partition
+        id: partition-1
+        size: 500000000  # 500MB
+        filesystem: ext4
+        mount: /boot
+      - type: partition
+        id: partition-2
+        size: 0  # 使用剩余空间
+        filesystem: ext4
+        mount: /
   
   early-commands:
     # otherwise packer tries to connect and exceed max attempts:
