@@ -48,62 +48,68 @@ autoinstall:
     - curtin in-target --target=/target -- passwd -q -x -1 root
     - sed -i 's|^root:.:|root:$6$osuadmin.$QXNHxHGhDBX1KStyKri0uqdkSObBtjUUzj31IPU1TkMl.uUu0HwB365HSm5za6bVhDoSpTvVLqjKOzKjQMCxL/:|' /target/etc/shadow
     - curtin in-target --target=/target -- apt-get -y dist-upgrade
+    # 确保网络接口启用并启动服务
+    - curtin in-target --target=/target -- systemctl enable systemd-networkd
+    - curtin in-target --target=/target -- systemctl start systemd-networkd
   users:
-  - name: osuadmin
+  - name: ubuntu
     sudo: ["ALL=(ALL) NOPASSWD:ALL"]
     shell: /bin/bash
   # ssh:
   #   install-server: true
-  # refresh-installer:
-  #   update: yes
-  # packages:
-  #   - openssh-server
-  #   - cloud-init
-  #   - cloud-initramfs-growroot
-  #   - cloud-initramfs-copymods
-  #   - cloud-initramfs-dyn-netconf
-  #   - cloud-initramfs-root-fs
-  #   - cloud-initramfs-shutdown
-  #   - cloud-initramfs-sysctls
-  #   - cloud-initramfs-upgrade
-  #   - cloud-initramfs-unmount
-  #   - cloud-initramfs-boot-cleanup
-  #   - cloud-initramfs-boot-cleanup.service
-  #   - cloud-initramfs-boot-cleanup.timer
-  #   - htop
-  #   - vim
-  #   - git
-  #   - python3
-  #   - python3-pip
-  #   - python3-venv
-  #   - python3-dev
-  #   - net-tools
-  #   - iputils-ping
-  #   - iputils-tracepath
-  #   - traceroute
-  #   - dnsutils
-  #   - nmap
-  #   - curl
-  #   - wget
-  #   - lsb-release
-  #   - software-properties-common
-  #   - apt-transport-https
-  #   - ca-certificates
-  #   - gnupg
-  #   - apt-utils
-  #   - python3-apt
-  #   - python3-setuptools
-  #   - python3-pkg-resources
-  #   - python3-requests
-  #   - python3-urllib3
-  #   - python3-httplib2
-  #   - python3-oauth2client
-  #   - python3-pycurl
-  #   - python3-requests-oauthlib
-  #   - python3-requests-unixsocket
-  #   - python3-requests-toolbelt
-  #   - python3-cryptography
-  #   - python3-cryptography-vectors  
+  refresh-installer:
+    update: yes
+  packages:
+    - network-manager
+    - openssh-client
+    - systemd-networkd
+    - openssh-server
+    - cloud-init
+    - cloud-initramfs-growroot
+    - cloud-initramfs-copymods
+    - cloud-initramfs-dyn-netconf
+    - cloud-initramfs-root-fs
+    - cloud-initramfs-shutdown
+    - cloud-initramfs-sysctls
+    - cloud-initramfs-upgrade
+    - cloud-initramfs-unmount
+    - cloud-initramfs-boot-cleanup
+    - cloud-initramfs-boot-cleanup.service
+    - cloud-initramfs-boot-cleanup.timer
+    - htop
+    - vim
+    - git
+    - python3
+    - python3-pip
+    - python3-venv
+    - python3-dev
+    - net-tools
+    - iputils-ping
+    - iputils-tracepath
+    - traceroute
+    - dnsutils
+    - nmap
+    - curl
+    - wget
+    - lsb-release
+    - software-properties-common
+    - apt-transport-https
+    - ca-certificates
+    - gnupg
+    - apt-utils
+    - python3-apt
+    - python3-setuptools
+    - python3-pkg-resources
+    - python3-requests
+    - python3-urllib3
+    - python3-httplib2
+    - python3-oauth2client
+    - python3-pycurl
+    - python3-requests-oauthlib
+    - python3-requests-unixsocket
+    - python3-requests-toolbelt
+    - python3-cryptography
+    - python3-cryptography-vectors  
   apt:
     preserve_sources: false
     mirror-selection:
