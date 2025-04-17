@@ -13,10 +13,10 @@ autoinstall:
   locale: en_US.UTF-8
   network:
     version: 2
-    ethernets:
-      ens3:
-        dhcp4: true
-        dhcp6: false
+    ethernets: {}
+      # ens3:
+      #   dhcp4: true
+      #   dhcp6: false
   storage:
     config:
       - type: disk
@@ -109,7 +109,7 @@ autoinstall:
     preserve_sources_list: false
     primary:
      - arches: [i386, amd64]
-       uri: "https://ubuntu.osuosl.org/ubuntu"
+       uri: "http://mirrors.aliyun.com/ubuntu/"
      - arches: [default]
-       uri: "https://ports.ubuntu.com/ubuntu-ports"
+       uri: "http://mirrors.aliyun.com/ubuntu/"
     geoip: false
