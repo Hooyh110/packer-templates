@@ -58,7 +58,7 @@ source "qemu" "ubuntu-2204" {
   ssh_wait_timeout = "10000s"
   vnc_bind_address = "0.0.0.0"
   vnc_port_min     = 5901
-  vnc_port_max     = 5910
+  vnc_port_max     = 5901
   vm_name          = "ubuntu-2204"
 }
 
