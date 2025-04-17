@@ -43,8 +43,6 @@ autoinstall:
   #   - systemctl stop ssh
   #   - systemctl restart systemd-timesyncd
   late-commands:
-    - curtin in-target -- apt-get update
-    - curtin in-target -- apt-get -y install qemu-guest-agent
     - echo "PermitRootLogin yes" >> /target/etc/ssh/sshd_config
     - curtin in-target --target=/target -- passwd -q -u root
     - curtin in-target --target=/target -- passwd -q -x -1 root
