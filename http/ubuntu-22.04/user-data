@@ -14,14 +14,18 @@ autoinstall:
   network:
     version: 2
     renderer: networkd
-    ethernets:
-      ens3:
-        dhcp4: true
-        dhcp6: false
-        nameserver:
-          addresses:
-            - 8.8.8.8
-            - 8.8.4.4
+    ethernets: {}
+  # network:
+  #   version: 2
+  #   renderer: networkd
+  #   ethernets:
+  #     ens3:
+  #       dhcp4: true
+  #       dhcp6: false
+  #       nameserver:
+  #         addresses:
+  #           - 8.8.8.8
+  #           - 8.8.4.4
   storage:
     layout:
       name: direct

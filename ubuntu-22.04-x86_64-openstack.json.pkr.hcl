@@ -47,7 +47,7 @@ source "qemu" "ubuntu-2204" {
   qemuargs         = [
     [
       "-m",
-      "8128M"
+      "18128M"
     ],
     [
       "-boot",
@@ -70,48 +70,48 @@ build {
     "source.qemu.ubuntu-2204"
   ]
 
-  provisioner "shell-local" {
-    scripts = [
-      "scripts/common/berks-vendor.sh"
-    ]
-  }
-
-  provisioner "shell" {
-    execute_command = "{{ .Vars }} sudo -S -E bash '{{ .Path }}'"
-    scripts         = [
-      "scripts/common/install-cinc.sh"
-    ]
-  }
-
-#  provisioner "file" {
-#    source = "cookbooks"
-#    destination = "/tmp/cinc/"
+#  provisioner "shell-local" {
+#    scripts = [
+#      "scripts/common/berks-vendor.sh"
+#    ]
 #  }
-
-#  provisioner "file" {
-#    source = "inspec"
-#    destination = "/tmp/cinc/"
+#
+#  provisioner "shell" {
+#    execute_command = "{{ .Vars }} sudo -S -E bash '{{ .Path }}'"
+#    scripts         = [
+#      "scripts/common/install-cinc.sh"
+#    ]
 #  }
-
-  provisioner "file" {
-    source = "chef/client.rb"
-    destination = "/tmp/cinc/client.rb"
-  }
-
-  provisioner "file" {
-    source = "chef/runlist/openstack.json"
-    destination = "/tmp/cinc/dna.json"
-  }
-
-  provisioner "shell" {
-    execute_command = "{{ .Vars }} sudo -S -E bash '{{ .Path }}'"
-    environment_vars = [
-      "OSUADMIN_PASSWD=${var.osuadmin_passwd}"
-    ]
-    scripts         = [
-      "scripts/common/converge-cinc.sh",
-      "scripts/common/remove-cinc.sh",
-      "scripts/common/minimize.sh"
-    ]
-  }
+#
+##  provisioner "file" {
+##    source = "cookbooks"
+##    destination = "/tmp/cinc/"
+##  }
+#
+##  provisioner "file" {
+##    source = "inspec"
+##    destination = "/tmp/cinc/"
+##  }
+#
+#  provisioner "file" {
+#    source = "chef/client.rb"
+#    destination = "/tmp/cinc/client.rb"
+#  }
+#
+#  provisioner "file" {
+#    source = "chef/runlist/openstack.json"
+#    destination = "/tmp/cinc/dna.json"
+#  }
+#
+#  provisioner "shell" {
+#    execute_command = "{{ .Vars }} sudo -S -E bash '{{ .Path }}'"
+#    environment_vars = [
+#      "OSUADMIN_PASSWD=${var.osuadmin_passwd}"
+#    ]
+#    scripts         = [
+#      "scripts/common/converge-cinc.sh",
+#      "scripts/common/remove-cinc.sh",
+#      "scripts/common/minimize.sh"
+#    ]
+#  }
 }
