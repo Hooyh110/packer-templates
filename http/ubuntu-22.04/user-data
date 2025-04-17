@@ -26,7 +26,7 @@ autoinstall:
     config:
       - type: disk
         match:
-          name: sda
+          name: vda
         preserve: false
         wipe: superblock-recursive
         ptable: gpt
