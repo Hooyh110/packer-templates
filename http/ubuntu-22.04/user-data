@@ -31,9 +31,9 @@ autoinstall:
       preserve: false
       grub_device: true
       wipe_table: true
-      device: 
-        - /dev/sda
-        - /dev/vda
+      # device: 
+      #   - /dev/sda
+      #   - /dev/vda
     config:
       - type: partition
         id: partition-1
