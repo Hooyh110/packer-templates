@@ -55,9 +55,9 @@ source "qemu" "ubuntu-2204" {
     ]
   ]
   shutdown_command = "/sbin/halt -h -p"
+  ssh_username     = "ubuntu"
   ssh_password     = "osuadmin"
   ssh_port         = 22
-  ssh_username     = "root"
   ssh_wait_timeout = "10000s"
   vnc_bind_address = "0.0.0.0"
   vnc_port_min     = 8888
