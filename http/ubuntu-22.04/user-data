@@ -13,10 +13,15 @@ autoinstall:
   locale: en_US.UTF-8
   network:
     version: 2
-    ethernets: {}
-      # ens3:
-      #   dhcp4: true
-      #   dhcp6: false
+    renderer: networkd
+    ethernets:
+      ens3:
+        dhcp4: true
+        dhcp6: false
+        nameserver:
+          addresses:
+            - 8.8.8.8
+            - 8.8.4.4
   storage:
     config:
       - type: disk
@@ -48,6 +53,8 @@ autoinstall:
     - systemctl stop ssh
     - systemctl restart systemd-timesyncd
   late-commands:
+    - curtin in-target -- apt-get update
+    - curtin in-target -- apt-get -y install qemu-guest-agent
     - echo "PermitRootLogin yes" >> /target/etc/ssh/sshd_config
     - curtin in-target --target=/target -- passwd -q -u root
     - curtin in-target --target=/target -- passwd -q -x -1 root
