@@ -32,7 +32,7 @@ autoinstall:
     search_drivers: false
   ssh:
     allow-pw: true
-    authorized-keys: []
+    # authorized-keys: []
     install-server: true
   storage:
     layout:
