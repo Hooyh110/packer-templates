@@ -38,10 +38,10 @@ autoinstall:
     layout:
       name: direct
       #reset-partitions: true
-  # early-commands:
-  #   # otherwise packer tries to connect and exceed max attempts:
-  #   - systemctl stop ssh
-  #   - systemctl restart systemd-timesyncd
+  early-commands:
+    # otherwise packer tries to connect and exceed max attempts:
+    - systemctl stop ssh
+    - systemctl restart systemd-timesyncd
   late-commands:
     - echo "PermitRootLogin yes" >> /target/etc/ssh/sshd_config
     - curtin in-target --target=/target -- passwd -q -u root
