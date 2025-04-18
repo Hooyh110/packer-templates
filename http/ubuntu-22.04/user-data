@@ -51,6 +51,11 @@ autoinstall:
     # 确保网络接口启用并启动服务
     - curtin in-target --target=/target -- systemctl enable systemd-networkd
     - curtin in-target --target=/target -- systemctl start systemd-networkd
+    #增加驱动包
+    - curtin in-target --target=/target -- apt-get -y update
+    - curtin in-target --target=/target -- apt-get -y linux-modules-extra-$(uname -r)
+    - curtin in-target --target=/target -- apt-get -y qemu-guest-agent
+    - curtin in-target --target=/target -- apt-get -y virtio-modules-$(uname -r)
   users:
   - name: ubuntu
     sudo: ["ALL=(ALL) NOPASSWD:ALL"]
@@ -90,11 +95,8 @@ autoinstall:
     - ca-certificates
     - gnupg
     - apt-utils
-    #增加驱动包
-    - linux-modules-extra-$(uname -r)
     - linux-firmware
-    - qemu-guest-agent
-    - virtio-modules-$(uname -r)
+
   apt:
     preserve_sources: false
     mirror-selection:
