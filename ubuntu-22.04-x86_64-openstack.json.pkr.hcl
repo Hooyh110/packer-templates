@@ -52,6 +52,14 @@ source "qemu" "ubuntu-2204" {
     [
       "-boot",
       "strict=on"
+    ],
+    [
+      "-netdev", 
+      "user,id=mynet0"
+    ],
+    [
+      "-device", 
+      "virtio-net-pci,netdev=mynet0"
     ]
   ]
   shutdown_command = "/sbin/halt -h -p"

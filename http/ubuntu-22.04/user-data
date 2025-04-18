@@ -61,6 +61,14 @@ autoinstall:
     update: yes
   packages:
     - network-manager
+    - net-tools
+    - ifupdown
+    - ifupdown-hotplug
+    - ifupdown-multi
+    - ifupdown-multi-eth
+    - ifupdown-multi-eth-bridge
+    - ifupdown-multi-eth-bridge-vlan
+    - ifupdown-ng
     - openssh-client
     - systemd-networkd
     - openssh-server
