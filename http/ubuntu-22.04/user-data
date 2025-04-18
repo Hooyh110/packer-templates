@@ -12,21 +12,21 @@ autoinstall:
     variant: ""
   locale: en_US.UTF-8
   timezone: Asia/Shanghai
-  network:
-    version: 2
-    renderer: networkd
-    ethernets: {}
   # network:
   #   version: 2
   #   renderer: networkd
-  #   ethernets:
-  #     ens3:
-  #       dhcp4: true
-  #       dhcp6: false
-  #       nameserver:
-  #         addresses:
-  #           - 8.8.8.8
-  #           - 8.8.4.4
+  #   ethernets: {}
+  network:
+    version: 2
+    renderer: networkd
+    ethernets:
+      eth0:
+        match:
+          name: en*
+        dhcp4: true
+        dhcp6: false
+        nameservers:
+          addresses: [ "8.8.8.8", "8.8.4.4" ]
   source:
     id: ubuntu-server
     search_drivers: false
@@ -63,12 +63,6 @@ autoinstall:
     - network-manager
     - net-tools
     - ifupdown
-    - ifupdown-hotplug
-    - ifupdown-multi
-    - ifupdown-multi-eth
-    - ifupdown-multi-eth-bridge
-    - ifupdown-multi-eth-bridge-vlan
-    - ifupdown-ng
     - openssh-client
     - systemd-networkd
     - openssh-server
