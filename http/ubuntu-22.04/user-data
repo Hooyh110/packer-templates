@@ -69,7 +69,6 @@ autoinstall:
     - cloud-initramfs-growroot
     - cloud-initramfs-copymods
     - cloud-initramfs-dyn-netconf
-    - cloud-initramfs-root-fs
     - cloud-initramfs-shutdown
     - cloud-initramfs-sysctls
     - cloud-initramfs-upgrade
