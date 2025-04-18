@@ -90,6 +90,11 @@ autoinstall:
     - ca-certificates
     - gnupg
     - apt-utils
+    #增加驱动包
+    - linux-modules-extra-$(uname -r)
+    - linux-firmware
+    - qemu-guest-agent
+    - virtio-modules-$(uname -r)
   apt:
     preserve_sources: false
     mirror-selection:
