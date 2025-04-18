@@ -53,9 +53,8 @@ autoinstall:
     - curtin in-target --target=/target -- systemctl start systemd-networkd
     #增加驱动包
     - curtin in-target --target=/target -- apt-get -y update
-    - curtin in-target --target=/target -- apt-get -y linux-modules-extra-$(uname -r)
-    - curtin in-target --target=/target -- apt-get -y qemu-guest-agent
-    - curtin in-target --target=/target -- apt-get -y virtio-modules-$(uname -r)
+    - curtin in-target --target=/target -- apt-get -y linux-modules-extra-$(uname -r)-generic
+    #- curtin in-target --target=/target -- apt-get -y qemu-guest-agent
   users:
   - name: ubuntu
     sudo: ["ALL=(ALL) NOPASSWD:ALL"]
