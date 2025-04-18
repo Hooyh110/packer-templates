@@ -63,7 +63,7 @@ source "qemu" "ubuntu-2204" {
     ]
   ]
   shutdown_command = "/sbin/halt -h -p"
-  ssh_username     = "ubuntu"
+  ssh_username     = "root"
   ssh_password     = "osuadmin"
   ssh_port         = 22
   ssh_wait_timeout = "10000s"
